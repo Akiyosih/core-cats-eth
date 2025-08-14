@@ -1,57 +1,125 @@
-# Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
+# 🐱 Core Cats - Fully On-chain NFT Project (Ethereum Testnet)
 
-This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+## English
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+### Overview
+Core Cats is a **fully on-chain NFT collection** originally designed for Core Blockchain and now being implemented on the **Ethereum Testnet** for development and testing.  
+It features **24×24 pixel generative cats**, inspired by CryptoPunks, each with unique patterns, eye colors, and poses.  
+All NFTs are **fully generated and stored on-chain**—no off-chain metadata.
 
-## Project Overview
+- **Total Supply:** 1,000 unique cats (testnet version for now)
+- **Mint Type:** Free Mint
+- **License:** MIT
+- **Blockchain:** Ethereum Testnet (Goerli/Sepolia planned)
 
-This example project includes:
+---
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+### Objectives
+- Complete functional deployment on Ethereum Testnet before mainnet migration.
+- Maintain **fully open and transparent** development.
+- Ensure **full on-chain storage** of SVG images and metadata.
+- Use lessons from testnet deployment to prepare for Ethereum Mainnet and future Core Blockchain deployment.
+- Preserve CryptoPunks-inspired design with original cat personalities.
 
-## Usage
+---
 
-### Running Tests
+### Roadmap
+1. **Local Development Setup**
+   - Initialize Hardhat project
+   - Configure `.gitignore` to protect sensitive files
+   - Prepare test accounts with faucet ETH
 
-To run all the tests in the project, execute the following command:
+2. **Smart Contract Development**
+   - Implement minimal ERC-721-compatible contract
+   - Store SVG image data fully on-chain
+   - Add random trait generation logic
 
-```shell
-npx hardhat test
-```
+3. **Testnet Deployment**
+   - Deploy to Ethereum Testnet (Goerli/Sepolia)
+   - Run minting and metadata retrieval tests
+   - Verify contract on Etherscan
 
-You can also selectively run the Solidity or `mocha` tests:
+4. **Mainnet & Core Blockchain Migration**
+   - Deploy to Ethereum Mainnet
+   - Adapt code for Core Blockchain deployment
+   - Verify and publish both versions
 
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
-```
+5. **Launch & Community**
+   - Open minting for the public (mainnet stage)
+   - Community showcase and documentation release
 
-### Make a deployment to Sepolia
+---
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
+### Tech Stack
+- **Smart Contracts:** Solidity (ERC-721)
+- **Dev Tools:** Hardhat, OpenZeppelin, Ethers.js
+- **Frontend:** Static site (GitHub Pages / Vercel)
+- **Node:** Ethereum Testnet RPC providers
 
-To run the deployment to a local chain:
+---
 
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
+### License
+MIT License - Free to use, modify, and distribute.
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+---
 
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
+## 日本語
 
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
+### 概要
+Core Catsは、もともとCore Blockchain向けに設計された**フルオンチェーンNFTコレクション**で、現在は**Ethereumテストネット**上で開発・検証を行っています。  
+**24×24ピクセルのジェネラティブ猫アート**を特徴とし、模様・目の色・ポーズがすべてランダム生成されます。  
+すべてのNFTが**完全にオンチェーンに保存**され、オフチェーンのメタデータは一切使用しません。
 
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
+- **発行総数:** 1,000匹（現状はテストネット版）
+- **ミント形式:** フリーミント
+- **ライセンス:** MIT
+- **ブロックチェーン:** Ethereumテストネット（Goerli / Sepolia予定）
 
-After setting the variable, you can run the deployment with the Sepolia network:
+---
 
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+### 目的
+- Ethereumテストネットでの完全動作を達成し、メインネット移行に備える。
+- **オープンで透明な**開発を継続。
+- SVG画像とメタデータを**完全オンチェーン**で保存。
+- テストネットで得た知見をEthereumメインネットと将来のCore Blockchainデプロイに活用。
+- クリプトパンクスを参考にしつつ、独自の猫キャラクターを創造。
+
+---
+
+### ロードマップ
+1. **ローカル開発環境構築**
+   - Hardhatプロジェクト初期化
+   - `.gitignore`で秘匿情報を保護
+   - テストアカウントにFaucet ETHを取得
+
+2. **スマートコントラクト開発**
+   - 最小限のERC-721互換コントラクト実装
+   - SVG画像を完全オンチェーン化
+   - ランダム属性生成ロジック構築
+
+3. **テストネットデプロイ**
+   - Ethereumテストネット（Goerli / Sepolia）にデプロイ
+   - ミントやメタデータ取得のテスト
+   - Etherscanでコントラクト検証
+
+4. **メインネット & Core Blockchain移行**
+   - Ethereumメインネットにデプロイ
+   - Core Blockchain対応コードに適応
+   - 両方のバージョンを検証・公開
+
+5. **ローンチ & コミュニティ**
+   - メインネットで一般ユーザー向けにミント開放
+   - コミュニティ展示とドキュメント公開
+
+---
+
+### 技術スタック
+- **スマートコントラクト:** Solidity (ERC-721)
+- **開発ツール:** Hardhat, OpenZeppelin, Ethers.js
+- **フロントエンド:** 静的サイト（GitHub Pages / Vercel）
+- **ノード:** EthereumテストネットRPCプロバイダ
+
+---
+
+### ライセンス
+MITライセンス - 自由に利用・改変可能
