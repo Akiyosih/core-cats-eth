@@ -1,6 +1,9 @@
 # Node modules
 /node_modules
 
+# Environment secrets
+.env
+
 # Compilation output
 /dist
 
@@ -16,5 +19,11 @@
 # Typechain output
 /types
 
+# Hardhat TypeChain (v3)
+/typechain-types
+
 # Hardhat coverage reports
 /coverage
+
+# Ignition deployments (network-specific; generated)
+/ignition/deployments/
