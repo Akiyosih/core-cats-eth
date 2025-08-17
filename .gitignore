@@ -27,3 +27,6 @@
 
 # Ignition deployments (network-specific; generated)
 /ignition/deployments/
+
+art/generated/
+art/tmp/
