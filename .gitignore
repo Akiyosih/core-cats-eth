@@ -29,4 +29,7 @@
 /ignition/deployments/
 
 art/generated/
+art/preview/
 art/tmp/
+manifests/generated.jsonl
+nonce.sqlite
