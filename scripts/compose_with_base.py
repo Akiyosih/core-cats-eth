@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
+import os
 import json
 from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE_IMG = ROOT / "art" / "base" / "base.PNG"
+BASE_IMG = ROOT / "art" / "base" / "base.png"
 MANIFEST = ROOT / "manifests" / "generated.jsonl"
 PATTERN_DIR = ROOT / "art" / "parts" / "patterns"
 PALETTE_CFG = ROOT / "art" / "palettes" / "pattern_config.json"
 OUT_DIR = ROOT / "art" / "preview" / "png"
+# 24px の整数倍で拡大するための倍率。既定=32 → 出力は 24*32=768 px。
+# 例) 一時的に 40 倍 (=960px) にしたい場合は PREVIEW_SCALE=40 を指定。
+PREVIEW_SCALE = int(os.environ.get("PREVIEW_SCALE", "32"))
 
 def load_palette_map(path: Path) -> dict:
     with open(path, "r", encoding="utf-8") as f:
@@ -89,6 +93,10 @@ def main():
             canvas.alpha_composite(recolored)  # 模様を先に
             canvas.alpha_composite(base)       # 輪郭を上に
             out_path = OUT_DIR / fname
+            # プレビュー用に最近傍で拡大（24 の整数倍）。元の 24×24 は manifest 側に従い別管理。
+            if PREVIEW_SCALE > 1:
+                w, h = canvas.size
+                canvas = canvas.resize((w * PREVIEW_SCALE, h * PREVIEW_SCALE), Image.NEAREST)
             canvas.save(out_path, format="PNG", optimize=False)
             written += 1
     print(f"[compose] wrote={written} -> {OUT_DIR}")

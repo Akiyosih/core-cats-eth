@@ -1,0 +1,55 @@
+{
+  "generated_manifest": "C:/Users/b8_q6/core-cats-eth/manifests/generated.jsonl",
+  "manifest_hash": "896bbef428e572dac2ce834e996bec95e4516b9ceea6e6e46c65e7c51079c9cf",
+  "palette_config_hash": "e5f9159651089be7450cbd12e88abbb3d0656851ac148f10ac0ba0f14386f226",
+  "count": 3,
+  "missing": [],
+  "items": [
+    {
+      "file": "C:/Users/b8_q6/core-cats-eth/art/selected/png/calico__tricolor_soft__000347.png",
+      "filename": "calico__tricolor_soft__000347.png",
+      "pattern": "calico",
+      "palette_id": "tricolor_soft",
+      "color_tuple": [
+        "#FEFBF6",
+        "#F89036",
+        "#32111A",
+        "#F89036"
+      ],
+      "variant_key": "6ef6018ba9cf4aa7a223a288bff9ec2ee4c936c52f743a9ad858d4d5c5335554",
+      "slots": 4,
+      "category": "natural",
+      "origin_file": "art/generated/png/calico__tricolor_soft__000347.png"
+    },
+    {
+      "file": "C:/Users/b8_q6/core-cats-eth/art/selected/png/masked__orange_warm__000027.png",
+      "filename": "masked__orange_warm__000027.png",
+      "pattern": "masked",
+      "palette_id": "orange_warm",
+      "color_tuple": [
+        "#FEB55E",
+        "#FDD399",
+        "#F89036"
+      ],
+      "variant_key": "414a608b616822ceae6edb5a0644ea8f7561f81bc5d8dbbcd34b0f97a6c3905f",
+      "slots": 3,
+      "category": "natural",
+      "origin_file": "art/generated/png/masked__orange_warm__000027.png"
+    },
+    {
+      "file": "C:/Users/b8_q6/core-cats-eth/art/selected/png/masked__orange_white__000033.png",
+      "filename": "masked__orange_white__000033.png",
+      "pattern": "masked",
+      "palette_id": "orange_white",
+      "color_tuple": [
+        "#FEB55E",
+        "#FEFBF6",
+        "#F89036"
+      ],
+      "variant_key": "97ebc90e384384f55c16b8e4fac782819da8868cbe42c9e64bdcad154ac6a320",
+      "slots": 3,
+      "category": "natural",
+      "origin_file": "art/generated/png/masked__orange_white__000033.png"
+    }
+  ]
+}

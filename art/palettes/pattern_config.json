@@ -5,18 +5,20 @@
     "special": 0.15
   },
   "natural_palettes": [
-    { "id": "tabby_orange_classic", "colors": ["#F89036","#FEB55E","#FDD399"] },
-    { "id": "calico_classic",       "colors": ["#F89036","#FEFBF6","#32111A"] },
-    { "id": "black_mono",           "colors": ["#282828"] },
-    { "id": "cow_bw",               "colors": ["#282828","#FEFBF6"] },
-    { "id": "gray_tabby_soft",      "colors": ["#D6D6D6","#A0A0A0","#6B6B6B"] },
-    { "id": "sana_orange_white",    "colors": ["#F89036","#FEB55E","#FEFBF6"] }
+    { "id": "orange_warm",   "colors": ["#F89036","#FEB55E","#FDD399"] },
+    { "id": "tricolor_soft", "colors": ["#F89036","#FEFBF6","#32111A"] },
+    { "id": "black_solid",   "colors": ["#282828"] },
+    { "id": "black_white",   "colors": ["#282828","#FEFBF6"] },
+    { "id": "gray_soft",     "colors": ["#D6D6D6","#A0A0A0","#6B6B6B"] },
+    { "id": "orange_white",  "colors": ["#F89036","#FEB55E","#FEFBF6"] },
+    { "id": "earth_tone",    "colors": ["#413028","#874E0E","#282828"] },
+    { "id": "ivory_brown",   "colors": ["#FEFBF6","#32111A"] }
   ],
   "special_palettes": [
-    { "id": "cyberpunk_core", "colors": ["#FF32D6","#FFFC65","#FEFBF6"] },
-    { "id": "psychedelic_1",  "colors": ["#FF5DA2","#7BFF5E","#5EB6FF"] },
-    { "id": "psychedelic_2",  "colors": ["#FFD166","#06D6A0","#EF476F"] },
-    { "id": "zombie_1",       "colors": ["#6ECF68","#2F4F2F","#A3F2A1"] },
+    { "id": "cyberpunk", "colors": ["#FF32D6","#FFFC65","#FEFBF6"] },
+    { "id": "psychedelic",  "colors": ["#FF5DA2","#7BFF5E","#5EB6FF"] },
+    { "id": "tropical_fever",  "colors": ["#FFD166","#06D6A0","#EF476F"] },
+    { "id": "zombie",       "colors": ["#6ECF68","#2F4F2F","#A3F2A1"] },
     { "id": "space_nebula",   "colors": ["#0D0D2B","#5E2BFF","#FF6EE7","#7AF9FF"] }
   ]
 }
