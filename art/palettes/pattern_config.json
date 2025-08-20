@@ -6,12 +6,12 @@
   },
   "natural_palettes": [
     { "id": "orange_warm",   "colors": ["#F89036","#FEB55E","#FDD399"] },
-    { "id": "tricolor_soft", "colors": ["#F89036","#FEFBF6","#32111A"] },
+    { "id": "tricolor_soft", "colors": ["#F89036","#FEFBF6","#32111A","#FDD399"] },
     { "id": "black_solid",   "colors": ["#282828"] },
     { "id": "black_white",   "colors": ["#282828","#FEFBF6"] },
     { "id": "gray_soft",     "colors": ["#D6D6D6","#A0A0A0","#6B6B6B"] },
     { "id": "orange_white",  "colors": ["#F89036","#FEB55E","#FEFBF6"] },
-    { "id": "earth_tone",    "colors": ["#413028","#874E0E","#282828"] },
+    { "id": "earth_tone",    "colors": ["#413028","#874E0E","#282828","#DC9646"] },
     { "id": "ivory_brown",   "colors": ["#FEFBF6","#32111A"] }
   ],
   "special_palettes": [
