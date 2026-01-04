@@ -2,7 +2,7 @@
 # scripts/verify_alpha_binary.py
 #
 # 使い方（PowerShellの例）:
-#   python .\scripts\verify_alpha_binary.py C:\Users\b8_q6\core-cats-eth\art\parts\patterns
+#   python .\scripts\verify_alpha_binary.py C:\Users\b8_q6\myproject\core-cats-eth\art\parts\patterns
 #
 # 機能:
 #  - 引数のパス以下を再帰探索し *.png を対象に検査

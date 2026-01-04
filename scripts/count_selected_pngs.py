@@ -56,7 +56,7 @@ def parse_args():
     p = argparse.ArgumentParser(description="Core Cats: selected/png の模様・パレット集計")
     p.add_argument(
         "--dir",
-        default=r"C:\Users\b8_q6\core-cats-eth\art\selected\png",
+        default=r"C:\Users\b8_q6\myproject\core-cats-eth\art\selected\png",
         help="走査対象ディレクトリ（省略時は既定パス）",
     )
     p.add_argument(
