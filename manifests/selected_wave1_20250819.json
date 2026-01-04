@@ -1,12 +1,12 @@
 {
-  "generated_manifest": "C:/Users/b8_q6/core-cats-eth/manifests/generated.jsonl",
+  "generated_manifest": "manifests/generated.jsonl",
   "manifest_hash": "896bbef428e572dac2ce834e996bec95e4516b9ceea6e6e46c65e7c51079c9cf",
   "palette_config_hash": "e5f9159651089be7450cbd12e88abbb3d0656851ac148f10ac0ba0f14386f226",
   "count": 1,
   "missing": [],
   "items": [
     {
-      "file": "C:/Users/b8_q6/core-cats-eth/art/selected/png/calico__tricolor_soft__000347.png",
+      "file": "art/selected/png/calico__tricolor_soft__000347.png",
       "filename": "calico__tricolor_soft__000347.png",
       "pattern": "calico",
       "palette_id": "tricolor_soft",

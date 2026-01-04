@@ -24,6 +24,11 @@
 
 ## 1'. 過去のデプロイ履歴
 
+### Ignition deploymentId 別のデプロイ先（参考）
+- corecats-20250815-a: 0x97f310A189C48d7C918853A28CF921DB54190790
+- corecats-clean-a: 0xB9b44398952D3F38CB66d9f5bD2bd03B0B809C1A
+- corecats-verify-a: 0xdd6dEb0e1BDA88Aa5b838DeB4bEE322ca23386b5
+
 ### デプロイ者アドレス: 0x0F6571F9D5f2698c908A9c2f592151e2BF5aEEb1
 - Transaction Hash: 0x42dd8d0c1bbce4c24fd4a6f1fd6cbbc4822f2db1a61785b00668b61901ae1a7f  
   内容: Contract Creation  
