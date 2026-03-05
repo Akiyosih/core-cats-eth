@@ -1,7 +1,7 @@
 # Core Cats Work Procedure (Core Blockchain Mainnet Goal)
 
 Last updated: 2026-03-05  
-Version: v1.0 (post-correction)
+Version: v1.1 (randomness policy locked)
 
 ## 0. Source Validation Policy (Mandatory)
 1. Verify chain-level parameters with official ecosystem sources before editing deployment settings.
@@ -30,7 +30,11 @@ Version: v1.0 (post-correction)
    - signature expiry/replay prevention
    - supply and per-address limits
    - `tokenURI` integrity and deterministic output
-5. Produce deploy/verify/mint runbook and reproducible command set.
+5. Implement random mint architecture with reproducible transparency:
+   - same algorithm on Sepolia and Core testnet/mainnet
+   - `commit-reveal + future blockhash + non-repeating draw (lazy Fisher-Yates)`
+   - `RandomSource` abstraction so future VRF migration does not change NFT semantics
+6. Produce deploy/verify/mint runbook and reproducible command set.
 
 ## 4. Phase B - UI Delivery (View First, Mint Next)
 ### B1. Viewer UI (start immediately)
@@ -54,7 +58,7 @@ Version: v1.0 (post-correction)
 ## 6. Phase D - Core Blockchain Testnet Rehearsal
 1. Deploy contract with Core Blockchain-compatible settings.
 2. Verify contract on the target explorer in the Core ecosystem.
-3. Execute mint flow and UI checks on testnet.
+3. Execute mint flow and UI checks on testnet using the same commit-reveal random strategy as Sepolia.
 4. Confirm metadata and rendered SVG behavior against manifest expectations.
 
 ## 7. Phase E - Mainnet Readiness and Freeze
@@ -79,3 +83,4 @@ Version: v1.0 (post-correction)
 2. Anyone can verify deployed bytecode and contract source linkage.
 3. Viewer UI, mint UI, and chain data are consistent.
 4. No hidden mutable parameters remain after final freeze.
+5. Random assignment process is third-party verifiable from on-chain events and published scripts.

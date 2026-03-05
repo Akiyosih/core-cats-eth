@@ -16,6 +16,10 @@ Last updated: 2026-03-06
   - `CoreCatsOnchainData` + `CoreCatsMetadataRenderer` now generate full on-chain SVG + attributes from `final_1000_manifest_v1`.
   - Metadata attribute parity check passed for 1000/1000.
   - Pixel-level check (renderer SVG -> 24x24 raster vs `art/final/final1000_v1/png24`) passed for 1000/1000.
+- Random mint direction is now fixed:
+  - Sepolia rehearsal and Core production share one strategy.
+  - Baseline is `commit-reveal + future blockhash + non-repeating draw (lazy Fisher-Yates)`.
+  - Contract design will keep `RandomSource` abstraction for future VRF migration.
 
 ## Fixed Artifacts
 - `manifests/final_1000_manifest_v1.json`
@@ -27,15 +31,16 @@ Last updated: 2026-03-06
 - KYC-gated mint integration path for Core production is not finalized.
 - Branding/logo permission replies are pending.
 - Provenance hash is not locked on-chain yet (intentional, to keep replaceability before final freeze).
+- Core-native VRF production readiness is not yet confirmed from official ecosystem sources.
 
 ## Next Milestones
 1. Ethereum testnet release rehearsal:
    - deploy contract
    - verify contract
-   - mint test flow
+   - mint test flow with commit-reveal random assignment
    - production-network tokenURI/full on-chain rendering checks
 2. Add/expand contract tests around mint/signature/security matrix.
-3. Core testnet rehearsal with equivalent behavior.
+3. Core testnet rehearsal with equivalent behavior (same random assignment strategy).
 4. Mainnet go-live checklist and production deployment.
 
 ## Go/No-Go Gate for Final Freeze

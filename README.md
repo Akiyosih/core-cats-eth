@@ -25,6 +25,7 @@ Representative sample grid generated from the finalized 1,000-cat review build (
 - [Core Blockchain Work Procedure](docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md)
 - [Final 1000 Trait Schema](docs/FINAL1000_TRAIT_SCHEMA.md)
 - [ADR-0001: ETH-first Strategy](docs/DECISIONS/ADR-0001-eth-first-strategy.md)
+- [ADR-0002: Randomness Strategy](docs/DECISIONS/ADR-0002-randomness-strategy.md)
 
 ## English
 
