@@ -6,6 +6,12 @@ Last updated: 2026-03-06
 - This repository keeps ETH rehearsal artifacts, implementation history, and reproducibility references.
 - Active Core-first implementation source of truth is `core-cats`.
 - Operating mode update: this repository is maintained as reference/archive for ETH rehearsal outputs and design history.
+- Canonical Core contract execution order is maintained in `core-cats` ADR/work-procedure:
+  - https://github.com/Akiyosih/core-cats/blob/main/docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md
+  - https://github.com/Akiyosih/core-cats/blob/main/docs/DECISIONS/ADR-0001-core-toolchain-priority.md
+  - A: CoreZeppelin direct
+  - B: external solc
+  - C: self-implemented minimal core
 
 ## Current State
 - `final_1000_manifest_v1` is generated and fixed as the current release candidate.

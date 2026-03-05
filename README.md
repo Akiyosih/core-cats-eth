@@ -4,6 +4,9 @@
 - Current role: reference/archive track for ETH rehearsal outputs
 - Active Core-first implementation track: `core-cats` repository
 - This repository remains as reproducible reference for manifest, renderer, and migration docs
+- Canonical current Core execution order lives in:
+  - https://github.com/Akiyosih/core-cats/blob/main/docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md
+  - https://github.com/Akiyosih/core-cats/blob/main/docs/DECISIONS/ADR-0001-core-toolchain-priority.md
 
 ## Preview
 ![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
