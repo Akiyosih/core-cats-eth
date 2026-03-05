@@ -22,7 +22,7 @@ Version: v1.0 (post-correction)
 4. Status/roadmap/decision docs are published in this repository.
 
 ## 3. Phase A - Contract Completion on Ethereum Testnet
-1. Replace placeholder `tokenURI` implementation with final metadata/SVG path tied to final manifest logic.
+1. Replace placeholder `tokenURI` implementation with final metadata/SVG path tied to final manifest logic. (Done: 2026-03-06)
 2. Keep signature-based mint gate as baseline policy.
 3. Lock contract constants and access-control policy (`max supply`, `mint limit`, signer rotation policy).
 4. Add complete tests for:

@@ -3,14 +3,14 @@ pragma solidity ^0.8.28;
 
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
-import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
-import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
 
-contract CoreCats is ERC721, Ownable {
-    using Strings for uint256;
+interface ICoreCatsMetadataRenderer {
+    function tokenURI(uint256 tokenId) external view returns (string memory);
+}
 
+contract CoreCats is ERC721, Ownable {
     uint256 public constant MAX_SUPPLY = 1000;
     uint256 public constant MAX_PER_ADDRESS = 3;
 
@@ -24,6 +24,7 @@ contract CoreCats is ERC721, Ownable {
     // EIP-191 typed message prefix: we sign a packed hash of (to, nonce, expiry, chainid, this)
     // signer is the contract owner (off-chain signer).
     address public signer; // optional: defaults to owner
+    address public metadataRenderer;
 
     constructor() ERC721("CoreCats", "CCAT") Ownable(msg.sender) {
         signer = msg.sender;
@@ -31,6 +32,10 @@ contract CoreCats is ERC721, Ownable {
 
     function setSigner(address newSigner) external onlyOwner {
         signer = newSigner;
+    }
+
+    function setMetadataRenderer(address newRenderer) external onlyOwner {
+        metadataRenderer = newRenderer;
     }
 
     function totalSupply() public view returns (uint256) {
@@ -71,39 +76,9 @@ contract CoreCats is ERC721, Ownable {
         return keccak256(abi.encodePacked(to, nonce, expiry, block.chainid, address(this)));
     }
 
-    // Minimal on-chain SVG (24x24, fully transparent background, black silhouette placeholder)
-    // You can later replace svgBody() with generated 24x24 cat pixels.
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         _requireOwned(tokenId);
-
-        string memory name = string.concat("CoreCats #", tokenId.toString());
-        string memory description = "CoreCats: fully on-chain 24x24 SVG cat.";
-        string memory image = _svgImageData();
-
-        bytes memory json = abi.encodePacked(
-            '{"name":"', name,
-            '","description":"', description,
-            '","image":"', image,
-            '","attributes":[]}'
-        );
-
-        return string.concat(
-            "data:application/json;base64,",
-            Base64.encode(json)
-        );
-    }
-
-    function _svgImageData() internal pure returns (string memory) {
-        // 24x24, transparent background, single black rect as placeholder.
-        // Replace with the actual 24x24 pixel-art silhouette later.
-        string memory svg =
-            '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">'
-            '<rect x="10" y="10" width="4" height="4" fill="#000000"/>'
-            "</svg>";
-
-        return string.concat(
-            "data:image/svg+xml;base64,",
-            Base64.encode(bytes(svg))
-        );
+        require(metadataRenderer != address(0), "renderer not set");
+        return ICoreCatsMetadataRenderer(metadataRenderer).tokenURI(tokenId);
     }
 }

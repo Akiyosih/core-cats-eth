@@ -11,6 +11,14 @@ Representative sample grid generated from the finalized 1,000-cat review build (
 - `manifests/final_1000_preview_consistency_v1.json`: 1000/1000 consistency audit between review previews and final 24x24 outputs.
 - `manifests/trait_display_labels_v1.json`: Display label mapping for UI/metadata rendering (internal IDs remain stable).
 
+## Phase A-1 (tokenURI) Status
+- `contracts/CoreCats.sol`: `tokenURI` is now delegated to `metadataRenderer`.
+- `contracts/CoreCatsOnchainData.sol`: compressed on-chain data generated from `final_1000_manifest_v1` + 24x24 source layers.
+- `contracts/CoreCatsMetadataRenderer.sol`: deterministic on-chain SVG and metadata renderer.
+- `scripts/generate_onchain_data.py`: regenerates `CoreCatsOnchainData.sol`.
+- `scripts/verify_renderer_manifest_match.mjs`: verifies metadata attributes match manifest (1000/1000).
+- `scripts/verify_renderer_pixels.mjs`: verifies rendered SVG pixels match final `png24` outputs (1000/1000).
+
 ## Project Navigation
 - [Project Status](docs/PROJECT_STATUS.md)
 - [Core Migration Roadmap](docs/ROADMAP_CORE_MIGRATION.md)

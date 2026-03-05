@@ -1,6 +1,6 @@
 # Core Cats ETH - Project Status
 
-Last updated: 2026-03-05
+Last updated: 2026-03-06
 
 ## Scope
 - This repository is the implementation source of truth for the current build pipeline and deployment rehearsal.
@@ -11,6 +11,11 @@ Last updated: 2026-03-05
 - Validation is passing (`final_1000_validation_v1.json`).
 - Review-preview vs final-24x24 consistency audit is passing 1000/1000 (`final_1000_preview_consistency_v1.json`).
 - Preview image is published in README (`docs/assets/core_cats_preview_grid.png`).
+- Phase A-1 is implemented:
+  - `CoreCats` now delegates `tokenURI` to a dedicated renderer (`metadataRenderer`).
+  - `CoreCatsOnchainData` + `CoreCatsMetadataRenderer` now generate full on-chain SVG + attributes from `final_1000_manifest_v1`.
+  - Metadata attribute parity check passed for 1000/1000.
+  - Pixel-level check (renderer SVG -> 24x24 raster vs `art/final/final1000_v1/png24`) passed for 1000/1000.
 
 ## Fixed Artifacts
 - `manifests/final_1000_manifest_v1.json`
@@ -28,9 +33,10 @@ Last updated: 2026-03-05
    - deploy contract
    - verify contract
    - mint test flow
-   - tokenURI/full on-chain rendering checks
-2. Core testnet rehearsal with equivalent behavior.
-3. Mainnet go-live checklist and production deployment.
+   - production-network tokenURI/full on-chain rendering checks
+2. Add/expand contract tests around mint/signature/security matrix.
+3. Core testnet rehearsal with equivalent behavior.
+4. Mainnet go-live checklist and production deployment.
 
 ## Go/No-Go Gate for Final Freeze
 - Smart contract behavior stable on ETH and Core testnets.
