@@ -2,10 +2,6 @@
 
 Last updated: 2026-03-05
 
-## Prerequisite
-- Before any Core-chain decision, apply [CRITICAL_CHAIN_RULE.md](../CRITICAL_CHAIN_RULE.md).
-- This roadmap assumes **Core Blockchain (`core-coin`)**, not CoreDAO.
-
 ## Objective
 Build and validate the full on-chain NFT release flow in stages:
 1. Ethereum testnet (reference implementation and rapid iteration)

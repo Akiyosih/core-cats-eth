@@ -3,11 +3,10 @@
 Last updated: 2026-03-05  
 Version: v1.0 (post-correction)
 
-## 0. Critical Source Policy (Mandatory)
-1. Always apply [CRITICAL_CHAIN_RULE.md](../CRITICAL_CHAIN_RULE.md).
-2. "Core Blockchain" in this procedure means the `core-coin` ecosystem.
-3. Never import network/tool assumptions from unrelated ecosystems.
-4. When chain-level parameters are edited, record verified source URLs in docs or commit message.
+## 0. Source Validation Policy (Mandatory)
+1. Verify chain-level parameters with official ecosystem sources before editing deployment settings.
+2. Do not copy assumptions from unrelated ecosystems.
+3. When chain-level parameters are edited, record verified source URLs in docs or commit message.
 
 ## 1. Product Goals (Fixed)
 1. Full on-chain NFT.

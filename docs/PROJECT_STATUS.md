@@ -2,10 +2,6 @@
 
 Last updated: 2026-03-05
 
-## Critical Rule
-- See [CRITICAL_CHAIN_RULE.md](../CRITICAL_CHAIN_RULE.md).
-- Core migration work in this repository must use only the Core Blockchain (`core-coin`) source family.
-
 ## Scope
 - This repository is the implementation source of truth for the current build pipeline and deployment rehearsal.
 - Goal: complete end-to-end full on-chain NFT flow on Ethereum testnet first, then migrate to Core testnet/mainnet.

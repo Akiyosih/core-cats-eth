@@ -1,10 +1,5 @@
 # 🐱 Core Cats - Fully On-chain NFT Project (Ethereum Testnet)
 
-## Critical Chain Rule (最重要)
-- In this project, **Core Blockchain** means the `core-coin` ecosystem.
-- **Never** use CoreDAO documentation/network assumptions for this project.
-- The authoritative source set for Core migration is documented in [CRITICAL_CHAIN_RULE.md](CRITICAL_CHAIN_RULE.md).
-
 ## Preview
 ![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
 Representative sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
@@ -16,7 +11,6 @@ Representative sample grid generated from the finalized 1,000-cat review build (
 - `manifests/final_1000_preview_consistency_v1.json`: 1000/1000 consistency audit between review previews and final 24x24 outputs.
 
 ## Project Navigation
-- [Critical Chain Rule](CRITICAL_CHAIN_RULE.md)
 - [Project Status](docs/PROJECT_STATUS.md)
 - [Core Migration Roadmap](docs/ROADMAP_CORE_MIGRATION.md)
 - [Core Blockchain Work Procedure](docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md)
