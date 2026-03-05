@@ -2,7 +2,13 @@
 
 ## Preview
 ![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
-Representative sample grid from the current 1,000-cat review set (`art/review/final1000_preview_v1/png`).
+Representative sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
+
+## Current Fixed Artifacts
+- `manifests/final_1000_manifest_v1.json`: Canonical fixed 1,000 token manifest (token IDs, traits, 24x24 layer composition metadata).
+- `manifests/final_1000_validation_v1.json`: Structural validation result for final manifest and 24x24 outputs.
+- `manifests/final_1000_trait_summary_v1.json`: Distribution summary (palette/pattern/collar/rarity).
+- `manifests/final_1000_preview_consistency_v1.json`: 1000/1000 consistency audit between review previews and final 24x24 outputs.
 
 ## English
 
