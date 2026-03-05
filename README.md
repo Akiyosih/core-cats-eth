@@ -1,5 +1,9 @@
 # 🐱 Core Cats - Fully On-chain NFT Project (Ethereum Testnet)
 
+## Preview
+![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
+Representative sample grid from the current 1,000-cat review set (`art/review/final1000_preview_v1/png`).
+
 ## English
 
 ### Overview

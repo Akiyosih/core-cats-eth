@@ -1,0 +1,57 @@
+{
+  "version": "final_1000_validation_v1",
+  "validated_at": "2026-03-05T08:23:07Z",
+  "manifest": "manifests/final_1000_manifest_v1.json",
+  "ok": true,
+  "error_count": 0,
+  "errors": [],
+  "counts": {
+    "by_rarity_tier": {
+      "base": 900,
+      "rare": 98,
+      "superrare": 2
+    },
+    "by_rarity_type": {
+      "none": 900,
+      "odd_eyes": 22,
+      "sunglasses": 16,
+      "glasses": 16,
+      "blue_nose": 22,
+      "red_nose": 22,
+      "corelogo_1": 1,
+      "corelogo_2": 1
+    },
+    "by_collar": {
+      "without_collar": 602,
+      "with_collar": 398
+    },
+    "by_pattern": {
+      "calico": 159,
+      "classic_tabby": 132,
+      "hachiware": 84,
+      "mackerel_tabby": 110,
+      "masked": 123,
+      "pointed": 118,
+      "solid": 44,
+      "tortoiseshell": 130,
+      "tuxedo": 98,
+      "superrare_custom": 2
+    },
+    "by_palette_id": {
+      "black_white": 24,
+      "cyberpunk": 85,
+      "earth_tone": 190,
+      "gray_soft": 82,
+      "orange_warm": 87,
+      "orange_white": 52,
+      "psychedelic": 99,
+      "space_nebula": 81,
+      "tricolor_soft": 97,
+      "tropical_fever": 103,
+      "zombie": 89,
+      "ivory_brown": 7,
+      "black_solid": 2,
+      "superrare_custom": 2
+    }
+  }
+}

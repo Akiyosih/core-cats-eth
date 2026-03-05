@@ -1,0 +1,328 @@
+{
+  "version": "final_1000_trait_summary_v1",
+  "created_at": "2026-03-05T08:17:21Z",
+  "manifest": "manifests/final_1000_manifest_v1.json",
+  "total": 1000,
+  "counts": {
+    "by_pattern": {
+      "calico": 159,
+      "classic_tabby": 132,
+      "hachiware": 84,
+      "mackerel_tabby": 110,
+      "masked": 123,
+      "pointed": 118,
+      "solid": 44,
+      "superrare_custom": 2,
+      "tortoiseshell": 130,
+      "tuxedo": 98
+    },
+    "by_palette_id": {
+      "black_solid": 2,
+      "black_white": 24,
+      "cyberpunk": 85,
+      "earth_tone": 190,
+      "gray_soft": 82,
+      "ivory_brown": 7,
+      "orange_warm": 87,
+      "orange_white": 52,
+      "psychedelic": 99,
+      "space_nebula": 81,
+      "superrare_custom": 2,
+      "tricolor_soft": 97,
+      "tropical_fever": 103,
+      "zombie": 89
+    },
+    "by_collar": {
+      "with_collar": 398,
+      "without_collar": 602
+    },
+    "by_rarity_tier": {
+      "base": 900,
+      "rare": 98,
+      "superrare": 2
+    },
+    "by_rarity_type": {
+      "blue_nose": 22,
+      "corelogo_1": 1,
+      "corelogo_2": 1,
+      "glasses": 16,
+      "none": 900,
+      "odd_eyes": 22,
+      "red_nose": 22,
+      "sunglasses": 16
+    },
+    "by_category": {
+      "natural": 541,
+      "special": 457,
+      "superrare": 2
+    }
+  },
+  "cross": {
+    "pattern_by_rarity_tier": {
+      "base": {
+        "calico": 140,
+        "classic_tabby": 127,
+        "hachiware": 76,
+        "mackerel_tabby": 98,
+        "masked": 115,
+        "pointed": 106,
+        "solid": 38,
+        "tortoiseshell": 114,
+        "tuxedo": 86
+      },
+      "rare": {
+        "calico": 19,
+        "classic_tabby": 5,
+        "hachiware": 8,
+        "mackerel_tabby": 12,
+        "masked": 8,
+        "pointed": 12,
+        "solid": 6,
+        "tortoiseshell": 16,
+        "tuxedo": 12
+      },
+      "superrare": {
+        "superrare_custom": 2
+      }
+    },
+    "palette_by_rarity_tier": {
+      "base": {
+        "black_solid": 2,
+        "black_white": 19,
+        "cyberpunk": 77,
+        "earth_tone": 176,
+        "gray_soft": 72,
+        "ivory_brown": 6,
+        "orange_warm": 78,
+        "orange_white": 46,
+        "psychedelic": 92,
+        "space_nebula": 70,
+        "tricolor_soft": 86,
+        "tropical_fever": 95,
+        "zombie": 81
+      },
+      "rare": {
+        "black_white": 5,
+        "cyberpunk": 8,
+        "earth_tone": 14,
+        "gray_soft": 10,
+        "ivory_brown": 1,
+        "orange_warm": 9,
+        "orange_white": 6,
+        "psychedelic": 7,
+        "space_nebula": 11,
+        "tricolor_soft": 11,
+        "tropical_fever": 8,
+        "zombie": 8
+      },
+      "superrare": {
+        "superrare_custom": 2
+      }
+    },
+    "collar_by_rarity_tier": {
+      "base": {
+        "with_collar": 349,
+        "without_collar": 551
+      },
+      "rare": {
+        "with_collar": 49,
+        "without_collar": 49
+      },
+      "superrare": {
+        "without_collar": 2
+      }
+    },
+    "rarity_type_by_rarity_tier": {
+      "base": {
+        "none": 900
+      },
+      "rare": {
+        "blue_nose": 22,
+        "glasses": 16,
+        "odd_eyes": 22,
+        "red_nose": 22,
+        "sunglasses": 16
+      },
+      "superrare": {
+        "corelogo_1": 1,
+        "corelogo_2": 1
+      }
+    },
+    "pattern_by_palette_id": {
+      "black_solid": {
+        "solid": 2
+      },
+      "black_white": {
+        "calico": 8,
+        "hachiware": 2,
+        "mackerel_tabby": 4,
+        "masked": 1,
+        "pointed": 4,
+        "solid": 2,
+        "tortoiseshell": 2,
+        "tuxedo": 1
+      },
+      "cyberpunk": {
+        "calico": 20,
+        "classic_tabby": 8,
+        "hachiware": 7,
+        "mackerel_tabby": 9,
+        "masked": 4,
+        "pointed": 10,
+        "solid": 4,
+        "tortoiseshell": 14,
+        "tuxedo": 9
+      },
+      "earth_tone": {
+        "calico": 18,
+        "classic_tabby": 31,
+        "hachiware": 20,
+        "mackerel_tabby": 26,
+        "masked": 43,
+        "pointed": 20,
+        "solid": 4,
+        "tortoiseshell": 8,
+        "tuxedo": 20
+      },
+      "gray_soft": {
+        "calico": 7,
+        "classic_tabby": 9,
+        "hachiware": 8,
+        "mackerel_tabby": 8,
+        "masked": 8,
+        "pointed": 10,
+        "solid": 6,
+        "tortoiseshell": 14,
+        "tuxedo": 12
+      },
+      "ivory_brown": {
+        "classic_tabby": 1,
+        "pointed": 4,
+        "solid": 2
+      },
+      "orange_warm": {
+        "calico": 10,
+        "classic_tabby": 9,
+        "hachiware": 7,
+        "mackerel_tabby": 11,
+        "masked": 11,
+        "pointed": 8,
+        "solid": 5,
+        "tortoiseshell": 17,
+        "tuxedo": 9
+      },
+      "orange_white": {
+        "calico": 12,
+        "classic_tabby": 8,
+        "hachiware": 4,
+        "mackerel_tabby": 4,
+        "masked": 4,
+        "pointed": 8,
+        "tortoiseshell": 9,
+        "tuxedo": 3
+      },
+      "psychedelic": {
+        "calico": 18,
+        "classic_tabby": 7,
+        "hachiware": 10,
+        "mackerel_tabby": 9,
+        "masked": 9,
+        "pointed": 12,
+        "solid": 4,
+        "tortoiseshell": 22,
+        "tuxedo": 8
+      },
+      "space_nebula": {
+        "calico": 16,
+        "classic_tabby": 12,
+        "hachiware": 6,
+        "mackerel_tabby": 8,
+        "masked": 10,
+        "pointed": 10,
+        "solid": 6,
+        "tortoiseshell": 2,
+        "tuxedo": 11
+      },
+      "superrare_custom": {
+        "superrare_custom": 2
+      },
+      "tricolor_soft": {
+        "calico": 23,
+        "classic_tabby": 25,
+        "hachiware": 1,
+        "mackerel_tabby": 14,
+        "masked": 13,
+        "pointed": 10,
+        "tortoiseshell": 5,
+        "tuxedo": 6
+      },
+      "tropical_fever": {
+        "calico": 16,
+        "classic_tabby": 11,
+        "hachiware": 9,
+        "mackerel_tabby": 7,
+        "masked": 12,
+        "pointed": 11,
+        "solid": 5,
+        "tortoiseshell": 20,
+        "tuxedo": 12
+      },
+      "zombie": {
+        "calico": 11,
+        "classic_tabby": 11,
+        "hachiware": 10,
+        "mackerel_tabby": 10,
+        "masked": 8,
+        "pointed": 11,
+        "solid": 4,
+        "tortoiseshell": 17,
+        "tuxedo": 7
+      }
+    },
+    "rarity_type_by_collar": {
+      "with_collar": {
+        "blue_nose": 13,
+        "glasses": 7,
+        "none": 349,
+        "odd_eyes": 12,
+        "red_nose": 12,
+        "sunglasses": 5
+      },
+      "without_collar": {
+        "blue_nose": 9,
+        "corelogo_1": 1,
+        "corelogo_2": 1,
+        "glasses": 9,
+        "none": 551,
+        "odd_eyes": 10,
+        "red_nose": 10,
+        "sunglasses": 11
+      }
+    },
+    "pattern_by_collar": {
+      "with_collar": {
+        "calico": 64,
+        "classic_tabby": 54,
+        "hachiware": 31,
+        "mackerel_tabby": 45,
+        "masked": 53,
+        "pointed": 52,
+        "solid": 18,
+        "tortoiseshell": 41,
+        "tuxedo": 40
+      },
+      "without_collar": {
+        "calico": 95,
+        "classic_tabby": 78,
+        "hachiware": 53,
+        "mackerel_tabby": 65,
+        "masked": 70,
+        "pointed": 66,
+        "solid": 26,
+        "superrare_custom": 2,
+        "tortoiseshell": 89,
+        "tuxedo": 58
+      }
+    }
+  }
+}
