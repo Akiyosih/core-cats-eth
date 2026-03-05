@@ -12,6 +12,7 @@ Status: Accepted
 - Use Ethereum testnet as the primary implementation track (`core-cats-eth`) to finish the target product behavior first.
 - Keep Core-specific features (including KYC gating integration details) modular and migration-ready.
 - After ETH flow is stable, migrate and validate on Core testnet, then move to Core mainnet.
+- Core migration references must follow `core-coin` ecosystem sources only (see `CRITICAL_CHAIN_RULE.md`).
 
 ## Rationale
 - Preserves delivery momentum.

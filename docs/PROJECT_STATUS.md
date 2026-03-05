@@ -2,6 +2,10 @@
 
 Last updated: 2026-03-05
 
+## Critical Rule
+- See [CRITICAL_CHAIN_RULE.md](../CRITICAL_CHAIN_RULE.md).
+- Core migration work in this repository must use only the Core Blockchain (`core-coin`) source family.
+
 ## Scope
 - This repository is the implementation source of truth for the current build pipeline and deployment rehearsal.
 - Goal: complete end-to-end full on-chain NFT flow on Ethereum testnet first, then migrate to Core testnet/mainnet.
@@ -19,7 +23,7 @@ Last updated: 2026-03-05
 - `manifests/final_1000_preview_consistency_v1.json`
 
 ## Open Items
-- CorePass/KYC mint gating official integration path is not finalized.
+- KYC-gated mint integration path for Core production is not finalized.
 - Branding/logo permission replies are pending.
 - Provenance hash is not locked on-chain yet (intentional, to keep replaceability before final freeze).
 
