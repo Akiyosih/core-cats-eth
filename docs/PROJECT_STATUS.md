@@ -3,8 +3,9 @@
 Last updated: 2026-03-06
 
 ## Scope
-- This repository is the implementation source of truth for the current build pipeline and deployment rehearsal.
-- Goal: complete end-to-end full on-chain NFT flow on Ethereum testnet first, then migrate to Core testnet/mainnet.
+- This repository keeps ETH rehearsal artifacts, implementation history, and reproducibility references.
+- Active Core-first implementation source of truth is `core-cats`.
+- Operating mode update: this repository is maintained as reference/archive for ETH rehearsal outputs and design history.
 
 ## Current State
 - `final_1000_manifest_v1` is generated and fixed as the current release candidate.

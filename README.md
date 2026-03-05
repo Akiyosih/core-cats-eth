@@ -1,5 +1,10 @@
 # 🐱 Core Cats - Fully On-chain NFT Project (Ethereum Testnet)
 
+## Repository Mode
+- Current role: reference/archive track for ETH rehearsal outputs
+- Active Core-first implementation track: `core-cats` repository
+- This repository remains as reproducible reference for manifest, renderer, and migration docs
+
 ## Preview
 ![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
 Representative sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
