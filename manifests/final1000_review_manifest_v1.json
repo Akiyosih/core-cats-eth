@@ -1,19 +1,19 @@
 {
   "version": "final1000_review_v1",
-  "created_at": "2026-03-05T05:37:02Z",
+  "created_at": "2026-03-05T11:16:05Z",
   "inputs": {
     "base_manifest": "manifests/base1000_no_rare_latest.json",
-    "base_manifest_sha256": "7aae65f8f5fe839bee3123b5562776ac59343d1101e7586d1013d90643ec6968",
+    "base_manifest_sha256": "144c7e1bf66277c36b87579b0308ec57c1cb5e3988831275585686570c8732e8",
     "rare_dir": "art/candidates/rare_wave1/選定",
     "super1": {
       "token_id": 999,
       "file": "art/tmp/Core1.png",
-      "rarity_type": "corelogo_1"
+      "rarity_type": "corelogo"
     },
     "super2": {
       "token_id": 1000,
       "file": "art/tmp/Ping1.png",
-      "rarity_type": "corelogo_2"
+      "rarity_type": "pinglogo"
     }
   },
   "counts": {
@@ -2221,10 +2221,10 @@
       "review_file": "art/review/final1000_preview_v1/png/0220__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/selected/png/hachiware__tropical_fever__000066.png",
-      "base_file": "art/selected/png/hachiware__tropical_fever__000066.png",
-      "collar": false,
-      "collar_id": null
+      "source_file": "art/selected/png_collar_adjusted_wave1/0220__hachiware__tropical_fever__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0220__hachiware__tropical_fever__collar_checkered_collar.png",
+      "collar": true,
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 221,
@@ -5211,10 +5211,10 @@
       "review_file": "art/review/final1000_preview_v1/png/0519__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/selected/png/tortoiseshell__tropical_fever__000481.png",
-      "base_file": "art/selected/png/tortoiseshell__tropical_fever__000481.png",
-      "collar": false,
-      "collar_id": null
+      "source_file": "art/selected/png_collar_adjusted_wave1/0519__tortoiseshell__tropical_fever__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0519__tortoiseshell__tropical_fever__collar_checkered_collar.png",
+      "collar": true,
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 520,
@@ -7161,10 +7161,10 @@
       "review_file": "art/review/final1000_preview_v1/png/0714__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/candidates/collar_wave1/選定/classic_tabby__zombie__000120__collar_classic_red_collar.png",
-      "base_file": "art/candidates/collar_wave1/選定/classic_tabby__zombie__000120__collar_classic_red_collar.png",
+      "source_file": "art/selected/png_collar_adjusted_wave1/0714__classic_tabby__zombie__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0714__classic_tabby__zombie__collar_checkered_collar.png",
       "collar": true,
-      "collar_id": "classic_red_collar"
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 715,
@@ -8481,20 +8481,20 @@
       "review_file": "art/review/final1000_preview_v1/png/0846__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/candidates/collar_wave1/選定/masked__zombie__000121__collar_classic_red_collar.png",
-      "base_file": "art/candidates/collar_wave1/選定/masked__zombie__000121__collar_classic_red_collar.png",
+      "source_file": "art/selected/png_collar_adjusted_wave1/0846__masked__zombie__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0846__masked__zombie__collar_checkered_collar.png",
       "collar": true,
-      "collar_id": "classic_red_collar"
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 847,
       "review_file": "art/review/final1000_preview_v1/png/0847__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/candidates/collar_wave1/選定/masked__zombie__000125__collar_classic_red_collar.png",
-      "base_file": "art/candidates/collar_wave1/選定/masked__zombie__000125__collar_classic_red_collar.png",
+      "source_file": "art/selected/png_collar_adjusted_wave1/0847__masked__zombie__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0847__masked__zombie__collar_checkered_collar.png",
       "collar": true,
-      "collar_id": "classic_red_collar"
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 848,
@@ -9831,10 +9831,10 @@
       "review_file": "art/review/final1000_preview_v1/png/0981__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/candidates/collar_wave1/選定/tuxedo__orange_white__000028__collar_classic_red_collar.png",
-      "base_file": "art/candidates/collar_wave1/選定/tuxedo__orange_white__000028__collar_classic_red_collar.png",
+      "source_file": "art/selected/png_collar_adjusted_wave1/0981__tuxedo__orange_white__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0981__tuxedo__orange_white__collar_checkered_collar.png",
       "collar": true,
-      "collar_id": "classic_red_collar"
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 982,
@@ -9991,10 +9991,10 @@
       "review_file": "art/review/final1000_preview_v1/png/0997__base.png",
       "source_tier": "base",
       "rarity_type": null,
-      "source_file": "art/candidates/collar_wave1/選定/tuxedo__zombie__000068__collar_classic_red_collar.png",
-      "base_file": "art/candidates/collar_wave1/選定/tuxedo__zombie__000068__collar_classic_red_collar.png",
+      "source_file": "art/selected/png_collar_adjusted_wave1/0997__tuxedo__zombie__collar_checkered_collar.png",
+      "base_file": "art/selected/png_collar_adjusted_wave1/0997__tuxedo__zombie__collar_checkered_collar.png",
       "collar": true,
-      "collar_id": "classic_red_collar"
+      "collar_id": "checkered_collar"
     },
     {
       "token_id": 998,
@@ -10008,9 +10008,9 @@
     },
     {
       "token_id": 999,
-      "review_file": "art/review/final1000_preview_v1/png/0999__superrare_corelogo_1.png",
+      "review_file": "art/review/final1000_preview_v1/png/0999__superrare_corelogo.png",
       "source_tier": "superrare",
-      "rarity_type": "corelogo_1",
+      "rarity_type": "corelogo",
       "source_file": "art/tmp/Core1.png",
       "base_file": "art/candidates/collar_wave1/選定/tuxedo__zombie__000072__collar_classic_red_collar.png",
       "collar": true,
@@ -10018,9 +10018,9 @@
     },
     {
       "token_id": 1000,
-      "review_file": "art/review/final1000_preview_v1/png/1000__superrare_corelogo_2.png",
+      "review_file": "art/review/final1000_preview_v1/png/1000__superrare_pinglogo.png",
       "source_tier": "superrare",
-      "rarity_type": "corelogo_2",
+      "rarity_type": "pinglogo",
       "source_file": "art/tmp/Ping1.png",
       "base_file": "art/candidates/collar_wave1/選定/tuxedo__zombie__000073__collar_checkered_collar.png",
       "collar": true,

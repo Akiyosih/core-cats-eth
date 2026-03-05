@@ -1,13 +1,13 @@
 {
   "version": "final_1000_validation_v1",
-  "validated_at": "2026-03-05T08:23:07Z",
+  "validated_at": "2026-03-05T11:38:13Z",
   "manifest": "manifests/final_1000_manifest_v1.json",
   "ok": true,
   "error_count": 0,
   "errors": [],
   "counts": {
     "by_rarity_tier": {
-      "base": 900,
+      "common": 900,
       "rare": 98,
       "superrare": 2
     },
@@ -18,12 +18,17 @@
       "glasses": 16,
       "blue_nose": 22,
       "red_nose": 22,
-      "corelogo_1": 1,
-      "corelogo_2": 1
+      "corelogo": 1,
+      "pinglogo": 1
     },
     "by_collar": {
-      "without_collar": 602,
-      "with_collar": 398
+      "without_collar": 600,
+      "with_collar": 400
+    },
+    "by_collar_type": {
+      "none": 600,
+      "checkered_collar": 200,
+      "classic_red_collar": 200
     },
     "by_pattern": {
       "calico": 159,
@@ -35,7 +40,7 @@
       "solid": 44,
       "tortoiseshell": 130,
       "tuxedo": 98,
-      "superrare_custom": 2
+      "superrare": 2
     },
     "by_palette_id": {
       "black_white": 24,
@@ -51,7 +56,7 @@
       "zombie": 89,
       "ivory_brown": 7,
       "black_solid": 2,
-      "superrare_custom": 2
+      "superrare": 2
     }
   }
 }

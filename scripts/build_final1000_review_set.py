@@ -8,8 +8,8 @@ Composition:
 - superrare2 images (token-specific replacement)
 
 Default superrare mapping:
-- token 999 -> corelogo_1 (art/tmp/Core1.png)
-- token 1000 -> corelogo_2 (art/tmp/Ping1.png)
+- token 999 -> corelogo (art/tmp/Core1.png)
+- token 1000 -> pinglogo (art/tmp/Ping1.png)
 """
 
 from __future__ import annotations
@@ -137,8 +137,8 @@ def main() -> int:
     rare_map = load_rare_map(args.rare_dir)
 
     super_map = {
-        args.super1_token: ("corelogo_1", args.super1_file),
-        args.super2_token: ("corelogo_2", args.super2_file),
+        args.super1_token: ("corelogo", args.super1_file),
+        args.super2_token: ("pinglogo", args.super2_file),
     }
     for tid in super_map:
         if tid < 1 or tid > 1000:
@@ -212,8 +212,8 @@ def main() -> int:
             "base_manifest": rel(args.base_manifest),
             "base_manifest_sha256": file_sha256(args.base_manifest),
             "rare_dir": rel(args.rare_dir),
-            "super1": {"token_id": args.super1_token, "file": rel(args.super1_file), "rarity_type": "corelogo_1"},
-            "super2": {"token_id": args.super2_token, "file": rel(args.super2_file), "rarity_type": "corelogo_2"},
+            "super1": {"token_id": args.super1_token, "file": rel(args.super1_file), "rarity_type": "corelogo"},
+            "super2": {"token_id": args.super2_token, "file": rel(args.super2_file), "rarity_type": "pinglogo"},
         },
         "counts": {
             "total": 1000,

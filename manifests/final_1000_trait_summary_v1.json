@@ -1,6 +1,6 @@
 {
   "version": "final_1000_trait_summary_v1",
-  "created_at": "2026-03-05T08:17:21Z",
+  "created_at": "2026-03-05T11:37:57Z",
   "manifest": "manifests/final_1000_manifest_v1.json",
   "total": 1000,
   "counts": {
@@ -12,7 +12,7 @@
       "masked": 123,
       "pointed": 118,
       "solid": 44,
-      "superrare_custom": 2,
+      "superrare": 2,
       "tortoiseshell": 130,
       "tuxedo": 98
     },
@@ -27,27 +27,32 @@
       "orange_white": 52,
       "psychedelic": 99,
       "space_nebula": 81,
-      "superrare_custom": 2,
+      "superrare": 2,
       "tricolor_soft": 97,
       "tropical_fever": 103,
       "zombie": 89
     },
     "by_collar": {
-      "with_collar": 398,
-      "without_collar": 602
+      "with_collar": 400,
+      "without_collar": 600
+    },
+    "by_collar_type": {
+      "checkered_collar": 200,
+      "classic_red_collar": 200,
+      "none": 600
     },
     "by_rarity_tier": {
-      "base": 900,
+      "common": 900,
       "rare": 98,
       "superrare": 2
     },
     "by_rarity_type": {
       "blue_nose": 22,
-      "corelogo_1": 1,
-      "corelogo_2": 1,
+      "corelogo": 1,
       "glasses": 16,
       "none": 900,
       "odd_eyes": 22,
+      "pinglogo": 1,
       "red_nose": 22,
       "sunglasses": 16
     },
@@ -59,7 +64,7 @@
   },
   "cross": {
     "pattern_by_rarity_tier": {
-      "base": {
+      "common": {
         "calico": 140,
         "classic_tabby": 127,
         "hachiware": 76,
@@ -82,11 +87,11 @@
         "tuxedo": 12
       },
       "superrare": {
-        "superrare_custom": 2
+        "superrare": 2
       }
     },
     "palette_by_rarity_tier": {
-      "base": {
+      "common": {
         "black_solid": 2,
         "black_white": 19,
         "cyberpunk": 77,
@@ -116,13 +121,13 @@
         "zombie": 8
       },
       "superrare": {
-        "superrare_custom": 2
+        "superrare": 2
       }
     },
     "collar_by_rarity_tier": {
-      "base": {
-        "with_collar": 349,
-        "without_collar": 551
+      "common": {
+        "with_collar": 351,
+        "without_collar": 549
       },
       "rare": {
         "with_collar": 49,
@@ -132,8 +137,23 @@
         "without_collar": 2
       }
     },
+    "collar_type_by_rarity_tier": {
+      "common": {
+        "checkered_collar": 180,
+        "classic_red_collar": 171,
+        "none": 549
+      },
+      "rare": {
+        "checkered_collar": 20,
+        "classic_red_collar": 29,
+        "none": 49
+      },
+      "superrare": {
+        "none": 2
+      }
+    },
     "rarity_type_by_rarity_tier": {
-      "base": {
+      "common": {
         "none": 900
       },
       "rare": {
@@ -144,8 +164,8 @@
         "sunglasses": 16
       },
       "superrare": {
-        "corelogo_1": 1,
-        "corelogo_2": 1
+        "corelogo": 1,
+        "pinglogo": 1
       }
     },
     "pattern_by_palette_id": {
@@ -243,8 +263,8 @@
         "tortoiseshell": 2,
         "tuxedo": 11
       },
-      "superrare_custom": {
-        "superrare_custom": 2
+      "superrare": {
+        "superrare": 2
       },
       "tricolor_soft": {
         "calico": 23,
@@ -283,18 +303,46 @@
       "with_collar": {
         "blue_nose": 13,
         "glasses": 7,
-        "none": 349,
+        "none": 351,
         "odd_eyes": 12,
         "red_nose": 12,
         "sunglasses": 5
       },
       "without_collar": {
         "blue_nose": 9,
-        "corelogo_1": 1,
-        "corelogo_2": 1,
+        "corelogo": 1,
         "glasses": 9,
-        "none": 551,
+        "none": 549,
         "odd_eyes": 10,
+        "pinglogo": 1,
+        "red_nose": 10,
+        "sunglasses": 11
+      }
+    },
+    "rarity_type_by_collar_type": {
+      "checkered_collar": {
+        "blue_nose": 6,
+        "glasses": 4,
+        "none": 180,
+        "odd_eyes": 3,
+        "red_nose": 4,
+        "sunglasses": 3
+      },
+      "classic_red_collar": {
+        "blue_nose": 7,
+        "glasses": 3,
+        "none": 171,
+        "odd_eyes": 9,
+        "red_nose": 8,
+        "sunglasses": 2
+      },
+      "none": {
+        "blue_nose": 9,
+        "corelogo": 1,
+        "glasses": 9,
+        "none": 549,
+        "odd_eyes": 10,
+        "pinglogo": 1,
         "red_nose": 10,
         "sunglasses": 11
       }
@@ -303,24 +351,60 @@
       "with_collar": {
         "calico": 64,
         "classic_tabby": 54,
-        "hachiware": 31,
+        "hachiware": 32,
         "mackerel_tabby": 45,
         "masked": 53,
         "pointed": 52,
         "solid": 18,
-        "tortoiseshell": 41,
+        "tortoiseshell": 42,
         "tuxedo": 40
       },
       "without_collar": {
         "calico": 95,
         "classic_tabby": 78,
-        "hachiware": 53,
+        "hachiware": 52,
         "mackerel_tabby": 65,
         "masked": 70,
         "pointed": 66,
         "solid": 26,
-        "superrare_custom": 2,
-        "tortoiseshell": 89,
+        "superrare": 2,
+        "tortoiseshell": 88,
+        "tuxedo": 58
+      }
+    },
+    "pattern_by_collar_type": {
+      "checkered_collar": {
+        "calico": 36,
+        "classic_tabby": 19,
+        "hachiware": 16,
+        "mackerel_tabby": 24,
+        "masked": 25,
+        "pointed": 28,
+        "solid": 11,
+        "tortoiseshell": 23,
+        "tuxedo": 18
+      },
+      "classic_red_collar": {
+        "calico": 28,
+        "classic_tabby": 35,
+        "hachiware": 16,
+        "mackerel_tabby": 21,
+        "masked": 28,
+        "pointed": 24,
+        "solid": 7,
+        "tortoiseshell": 19,
+        "tuxedo": 22
+      },
+      "none": {
+        "calico": 95,
+        "classic_tabby": 78,
+        "hachiware": 52,
+        "mackerel_tabby": 65,
+        "masked": 70,
+        "pointed": 66,
+        "solid": 26,
+        "superrare": 2,
+        "tortoiseshell": 88,
         "tuxedo": 58
       }
     }

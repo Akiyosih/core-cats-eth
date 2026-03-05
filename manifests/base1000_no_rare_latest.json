@@ -1,23 +1,38 @@
 {
-  "version": "base1000_no_rare_v1",
+  "version": "base1000_no_rare_v1_1",
   "created_at": "2026-03-05T04:59:38Z",
   "inputs": {
     "base600_manifest": "manifests/selected_wave3_20250820_215950.json",
     "base600_manifest_sha256": "37f8d13bb9fe46152c27e2cee18b62ca669de6ed83671451991197f795194c51",
     "collar400_selection_manifest": "manifests/collar_wave1_selection_prune_20260305_115544.json",
     "collar400_selection_manifest_sha256": "5986d55e3ae6c2afa0dbadfb2814de243735d8347f84ef44b0e43cea6077253b",
-    "rule": "token_id=1..600 from base600 order, 601..1000 from collar400 filename order"
+    "rule": "token_id=1..600 from base600 order, 601..1000 from collar400 filename order",
+    "collar_adjustment_wave1": {
+      "applied_at": "2026-03-05T11:15:39Z",
+      "none_to_checkered_token_ids": [
+        220,
+        519
+      ],
+      "classic_to_checkered_token_ids": [
+        714,
+        846,
+        847,
+        981,
+        997
+      ],
+      "preview_manifest": "art/candidates/collar_adjustment_wave1/30_after_change_preview_7tokens/manifest.json"
+    }
   },
   "counts": {
     "total": 1000,
     "base600": 600,
     "collar400": 400,
-    "collar_true": 400,
-    "collar_false": 600,
+    "collar_true": 402,
+    "collar_false": 598,
     "rare": 0,
     "superrare": 0,
-    "checkered_collar": 194,
-    "classic_red_collar": 206
+    "checkered_collar": 201,
+    "classic_red_collar": 201
   },
   "items": [
     {
@@ -5109,8 +5124,8 @@
     {
       "token_id": 220,
       "source_kind": "base600",
-      "file": "art/selected/png/hachiware__tropical_fever__000066.png",
-      "filename": "hachiware__tropical_fever__000066.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0220__hachiware__tropical_fever__collar_checkered_collar.png",
+      "filename": "0220__hachiware__tropical_fever__collar_checkered_collar.png",
       "base_filename": "hachiware__tropical_fever__000066.png",
       "pattern": "hachiware",
       "palette_id": "tropical_fever",
@@ -5122,9 +5137,9 @@
       "slots": 2,
       "category": "special",
       "origin_file_24": "art/generated/png/hachiware__tropical_fever__000066.png",
-      "collar": false,
-      "collar_id": null,
-      "collar_overlay_file_24": null,
+      "collar": true,
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
@@ -11926,8 +11941,8 @@
     {
       "token_id": 519,
       "source_kind": "base600",
-      "file": "art/selected/png/tortoiseshell__tropical_fever__000481.png",
-      "filename": "tortoiseshell__tropical_fever__000481.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0519__tortoiseshell__tropical_fever__collar_checkered_collar.png",
+      "filename": "0519__tortoiseshell__tropical_fever__collar_checkered_collar.png",
       "base_filename": "tortoiseshell__tropical_fever__000481.png",
       "pattern": "tortoiseshell",
       "palette_id": "tropical_fever",
@@ -11941,9 +11956,9 @@
       "slots": 4,
       "category": "special",
       "origin_file_24": "art/generated/png/tortoiseshell__tropical_fever__000481.png",
-      "collar": false,
-      "collar_id": null,
-      "collar_overlay_file_24": null,
+      "collar": true,
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
@@ -16441,8 +16456,8 @@
     {
       "token_id": 714,
       "source_kind": "collar400",
-      "file": "art/candidates/collar_wave1/選定/classic_tabby__zombie__000120__collar_classic_red_collar.png",
-      "filename": "classic_tabby__zombie__000120__collar_classic_red_collar.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0714__classic_tabby__zombie__collar_checkered_collar.png",
+      "filename": "0714__classic_tabby__zombie__collar_checkered_collar.png",
       "base_filename": "classic_tabby__zombie__000120.png",
       "pattern": "classic_tabby",
       "palette_id": "zombie",
@@ -16456,8 +16471,8 @@
       "category": "special",
       "origin_file_24": "art/generated/png/classic_tabby__zombie__000120.png",
       "collar": true,
-      "collar_id": "classic_red_collar",
-      "collar_overlay_file_24": "art/parts/accessories/collar/classic_red_collar.png",
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
@@ -19446,8 +19461,8 @@
     {
       "token_id": 846,
       "source_kind": "collar400",
-      "file": "art/candidates/collar_wave1/選定/masked__zombie__000121__collar_classic_red_collar.png",
-      "filename": "masked__zombie__000121__collar_classic_red_collar.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0846__masked__zombie__collar_checkered_collar.png",
+      "filename": "0846__masked__zombie__collar_checkered_collar.png",
       "base_filename": "masked__zombie__000121.png",
       "pattern": "masked",
       "palette_id": "zombie",
@@ -19461,16 +19476,16 @@
       "category": "special",
       "origin_file_24": "art/generated/png/masked__zombie__000121.png",
       "collar": true,
-      "collar_id": "classic_red_collar",
-      "collar_overlay_file_24": "art/parts/accessories/collar/classic_red_collar.png",
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
     {
       "token_id": 847,
       "source_kind": "collar400",
-      "file": "art/candidates/collar_wave1/選定/masked__zombie__000125__collar_classic_red_collar.png",
-      "filename": "masked__zombie__000125__collar_classic_red_collar.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0847__masked__zombie__collar_checkered_collar.png",
+      "filename": "0847__masked__zombie__collar_checkered_collar.png",
       "base_filename": "masked__zombie__000125.png",
       "pattern": "masked",
       "palette_id": "zombie",
@@ -19484,8 +19499,8 @@
       "category": "special",
       "origin_file_24": "art/generated/png/masked__zombie__000125.png",
       "collar": true,
-      "collar_id": "classic_red_collar",
-      "collar_overlay_file_24": "art/parts/accessories/collar/classic_red_collar.png",
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
@@ -22482,8 +22497,8 @@
     {
       "token_id": 981,
       "source_kind": "collar400",
-      "file": "art/candidates/collar_wave1/選定/tuxedo__orange_white__000028__collar_classic_red_collar.png",
-      "filename": "tuxedo__orange_white__000028__collar_classic_red_collar.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0981__tuxedo__orange_white__collar_checkered_collar.png",
+      "filename": "0981__tuxedo__orange_white__collar_checkered_collar.png",
       "base_filename": "tuxedo__orange_white__000028.png",
       "pattern": "tuxedo",
       "palette_id": "orange_white",
@@ -22496,8 +22511,8 @@
       "category": "natural",
       "origin_file_24": "art/generated/png/tuxedo__orange_white__000028.png",
       "collar": true,
-      "collar_id": "classic_red_collar",
-      "collar_overlay_file_24": "art/parts/accessories/collar/classic_red_collar.png",
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
@@ -22834,8 +22849,8 @@
     {
       "token_id": 997,
       "source_kind": "collar400",
-      "file": "art/candidates/collar_wave1/選定/tuxedo__zombie__000068__collar_classic_red_collar.png",
-      "filename": "tuxedo__zombie__000068__collar_classic_red_collar.png",
+      "file": "art/selected/png_collar_adjusted_wave1/0997__tuxedo__zombie__collar_checkered_collar.png",
+      "filename": "0997__tuxedo__zombie__collar_checkered_collar.png",
       "base_filename": "tuxedo__zombie__000068.png",
       "pattern": "tuxedo",
       "palette_id": "zombie",
@@ -22848,8 +22863,8 @@
       "category": "special",
       "origin_file_24": "art/generated/png/tuxedo__zombie__000068.png",
       "collar": true,
-      "collar_id": "classic_red_collar",
-      "collar_overlay_file_24": "art/parts/accessories/collar/classic_red_collar.png",
+      "collar_id": "checkered_collar",
+      "collar_overlay_file_24": "art/parts/accessories/collar/checkered_collar.png",
       "rarity_tier": "base",
       "rarity_type": null
     },
@@ -22919,5 +22934,6 @@
       "rarity_tier": "base",
       "rarity_type": null
     }
-  ]
+  ],
+  "updated_at": "2026-03-05T11:15:39Z"
 }

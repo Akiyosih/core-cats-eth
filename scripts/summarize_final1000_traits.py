@@ -49,6 +49,7 @@ def main() -> int:
     by_pattern = Counter()
     by_palette = Counter()
     by_collar = Counter()
+    by_collar_type = Counter()
     by_tier = Counter()
     by_type = Counter()
     by_category = Counter()
@@ -56,10 +57,13 @@ def main() -> int:
     pattern_by_tier: dict[str, Counter] = defaultdict(Counter)
     palette_by_tier: dict[str, Counter] = defaultdict(Counter)
     collar_by_tier: dict[str, Counter] = defaultdict(Counter)
+    collar_type_by_tier: dict[str, Counter] = defaultdict(Counter)
     type_by_tier: dict[str, Counter] = defaultdict(Counter)
     pattern_by_palette: dict[str, Counter] = defaultdict(Counter)
     type_by_collar: dict[str, Counter] = defaultdict(Counter)
+    type_by_collar_type: dict[str, Counter] = defaultdict(Counter)
     pattern_by_collar: dict[str, Counter] = defaultdict(Counter)
+    pattern_by_collar_type: dict[str, Counter] = defaultdict(Counter)
 
     for it in items:
         pattern = str(it["pattern"])
@@ -68,10 +72,12 @@ def main() -> int:
         rtype = str(it["rarity_type"])
         category = str(it.get("category", "unknown"))
         collar_state = "with_collar" if bool(it.get("collar")) else "without_collar"
+        collar_type = str(it.get("collar_type", "none"))
 
         by_pattern[pattern] += 1
         by_palette[palette] += 1
         by_collar[collar_state] += 1
+        by_collar_type[collar_type] += 1
         by_tier[tier] += 1
         by_type[rtype] += 1
         by_category[category] += 1
@@ -79,10 +85,13 @@ def main() -> int:
         pattern_by_tier[tier][pattern] += 1
         palette_by_tier[tier][palette] += 1
         collar_by_tier[tier][collar_state] += 1
+        collar_type_by_tier[tier][collar_type] += 1
         type_by_tier[tier][rtype] += 1
         pattern_by_palette[palette][pattern] += 1
         type_by_collar[collar_state][rtype] += 1
+        type_by_collar_type[collar_type][rtype] += 1
         pattern_by_collar[collar_state][pattern] += 1
+        pattern_by_collar_type[collar_type][pattern] += 1
 
     out_obj = {
         "version": "final_1000_trait_summary_v1",
@@ -93,6 +102,7 @@ def main() -> int:
             "by_pattern": to_sorted_dict(by_pattern),
             "by_palette_id": to_sorted_dict(by_palette),
             "by_collar": to_sorted_dict(by_collar),
+            "by_collar_type": to_sorted_dict(by_collar_type),
             "by_rarity_tier": to_sorted_dict(by_tier),
             "by_rarity_type": to_sorted_dict(by_type),
             "by_category": to_sorted_dict(by_category),
@@ -101,10 +111,13 @@ def main() -> int:
             "pattern_by_rarity_tier": nested_sorted_dict(pattern_by_tier),
             "palette_by_rarity_tier": nested_sorted_dict(palette_by_tier),
             "collar_by_rarity_tier": nested_sorted_dict(collar_by_tier),
+            "collar_type_by_rarity_tier": nested_sorted_dict(collar_type_by_tier),
             "rarity_type_by_rarity_tier": nested_sorted_dict(type_by_tier),
             "pattern_by_palette_id": nested_sorted_dict(pattern_by_palette),
             "rarity_type_by_collar": nested_sorted_dict(type_by_collar),
+            "rarity_type_by_collar_type": nested_sorted_dict(type_by_collar_type),
             "pattern_by_collar": nested_sorted_dict(pattern_by_collar),
+            "pattern_by_collar_type": nested_sorted_dict(pattern_by_collar_type),
         },
     }
 
@@ -115,7 +128,7 @@ def main() -> int:
     print(f"[summary-final1000] out={args.out}")
     print(
         "[summary-final1000] "
-        f"tier base={by_tier.get('base', 0)} rare={by_tier.get('rare', 0)} superrare={by_tier.get('superrare', 0)}"
+        f"tier common={by_tier.get('common', 0)} rare={by_tier.get('rare', 0)} superrare={by_tier.get('superrare', 0)}"
     )
     print(
         "[summary-final1000] "

@@ -1,0 +1,38 @@
+{
+  "version": "trait_display_labels_v1",
+  "description": "Display labels for UI/metadata rendering. Internal IDs in manifests remain unchanged.",
+  "trait_type_labels": {
+    "Pattern": "Coat Pattern",
+    "Color Variation": "Colorway",
+    "Collar": "Collar",
+    "Collar Type": "Collar Style",
+    "Rarity Tier": "Tier",
+    "Rarity Type": "Special Trait"
+  },
+  "trait_value_labels": {
+    "Collar": {
+      "with_collar": "With Collar",
+      "without_collar": "Without Collar"
+    },
+    "Collar Type": {
+      "none": "No Collar",
+      "checkered_collar": "Checkered Collar",
+      "classic_red_collar": "Classic Red Collar"
+    },
+    "Rarity Tier": {
+      "common": "Common",
+      "rare": "Rare",
+      "superrare": "Super Rare"
+    },
+    "Rarity Type": {
+      "none": "None",
+      "odd_eyes": "Odd Eyes",
+      "red_nose": "Red Nose",
+      "blue_nose": "Blue Nose",
+      "glasses": "Glasses",
+      "sunglasses": "Sunglasses",
+      "corelogo": "Core Logo",
+      "pinglogo": "Ping Logo"
+    }
+  }
+}

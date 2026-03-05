@@ -40,8 +40,19 @@ RARE_OVERLAY_BY_TYPE = {
 }
 
 RARE_TYPES = set(RARE_OVERLAY_BY_TYPE.keys())
-SUPERRARE_TYPES = {"corelogo_1", "corelogo_2"}
-RARITY_TIERS = {"base", "rare", "superrare"}
+SUPERRARE_TYPE_MAP = {
+    "corelogo_1": "corelogo",
+    "corelogo_2": "pinglogo",
+    "corelogo": "corelogo",
+    "pinglogo": "pinglogo",
+}
+SUPERRARE_TYPES = {"corelogo", "pinglogo"}
+SOURCE_TIERS = {"base", "rare", "superrare"}
+OUTPUT_RARITY_TIER_MAP = {
+    "base": "common",
+    "rare": "rare",
+    "superrare": "superrare",
+}
 TARGET_SIZE = (24, 24)
 
 
@@ -95,13 +106,13 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--superrare-pattern",
         type=str,
-        default="superrare_custom",
+        default="superrare",
         help="Pattern trait value for superrare tokens.",
     )
     p.add_argument(
         "--superrare-palette",
         type=str,
-        default="superrare_custom",
+        default="superrare",
         help="Color Variation (palette_id) for superrare tokens.",
     )
     p.add_argument(
@@ -145,13 +156,17 @@ def build_attributes(
     pattern: str,
     palette_id: str,
     collar: bool,
+    collar_id: str | None,
     rarity_tier: str,
     rarity_type: str,
 ) -> list[dict[str, str]]:
+    collar_state = "with_collar" if collar else "without_collar"
+    collar_type = str(collar_id) if collar and collar_id else "none"
     return [
         {"trait_type": "Pattern", "value": pattern},
         {"trait_type": "Color Variation", "value": palette_id},
-        {"trait_type": "Collar", "value": "with_collar" if collar else "without_collar"},
+        {"trait_type": "Collar", "value": collar_state},
+        {"trait_type": "Collar Type", "value": collar_type},
         {"trait_type": "Rarity Tier", "value": rarity_tier},
         {"trait_type": "Rarity Type", "value": rarity_type},
     ]
@@ -193,6 +208,7 @@ def main() -> int:
     by_pattern = Counter()
     by_palette = Counter()
     by_collar_state = Counter()
+    by_collar_type = Counter()
     base_layer_img = fit_to_size(load_rgba(args.base_layer_24), TARGET_SIZE, "base layer 24")
 
     for tid in range(1, 1001):
@@ -202,11 +218,15 @@ def main() -> int:
             raise RuntimeError(f"Missing token_id={tid} in input manifests")
 
         source_tier = str(review_item["source_tier"])
-        if source_tier not in RARITY_TIERS:
+        if source_tier not in SOURCE_TIERS:
             raise RuntimeError(f"Invalid source_tier for token {tid}: {source_tier}")
+        rarity_tier = OUTPUT_RARITY_TIER_MAP.get(source_tier)
+        if rarity_tier is None:
+            raise RuntimeError(f"No output rarity_tier mapping for source_tier={source_tier}")
 
-        rarity_type = review_item.get("rarity_type")
-        rarity_type = str(rarity_type) if rarity_type else "none"
+        rarity_type_raw = review_item.get("rarity_type")
+        rarity_type_raw = str(rarity_type_raw) if rarity_type_raw else "none"
+        rarity_type = rarity_type_raw
 
         base_origin_rel = str(base_item["origin_file_24"])
         base_origin_path = ROOT / base_origin_rel
@@ -224,13 +244,17 @@ def main() -> int:
         palette_id: str
         category: str
         color_tuple: list[str] | None
+        variant_key: str | None
+        slots: int | None
         collar: bool
         collar_id: str | None
         source_file_rel = str(review_item.get("source_file") or base_item.get("file"))
 
         if source_tier == "superrare":
+            rarity_type = SUPERRARE_TYPE_MAP.get(rarity_type_raw, "")
             if rarity_type not in SUPERRARE_TYPES:
-                raise RuntimeError(f"Invalid superrare type for token {tid}: {rarity_type}")
+                raise RuntimeError(f"Invalid superrare type for token {tid}: {rarity_type_raw}")
+
             super_path = ROOT / source_file_rel
             if not super_path.exists():
                 raise FileNotFoundError(f"Missing superrare source file for token {tid}: {super_path}")
@@ -243,6 +267,8 @@ def main() -> int:
             palette_id = args.superrare_palette
             category = "superrare"
             color_tuple = None
+            variant_key = None
+            slots = None
         else:
             if source_tier == "rare" and rarity_type not in RARE_TYPES:
                 raise RuntimeError(f"Invalid rare type for token {tid}: {rarity_type}")
@@ -286,15 +312,18 @@ def main() -> int:
             palette_id = str(base_item["palette_id"])
             category = str(base_item["category"])
             color_tuple = list(base_item.get("color_tuple") or [])
+            variant_key = str(base_item["variant_key"])
+            slots = int(base_item["slots"])
 
         out_png_path = args.out_dir / f"{tid:04d}.png"
         final_img.save(out_png_path, format="PNG", optimize=False)
 
-        by_tier[source_tier] += 1
+        by_tier[rarity_tier] += 1
         by_type[rarity_type] += 1
         by_pattern[pattern] += 1
         by_palette[palette_id] += 1
         by_collar_state["with_collar" if collar else "without_collar"] += 1
+        by_collar_type[str(collar_id) if collar and collar_id else "none"] += 1
 
         item_out = {
             "token_id": tid,
@@ -303,14 +332,17 @@ def main() -> int:
             "base_preview_file": str(base_item["file"]),
             "base_origin_file_24": rel(base_origin_path),
             "source_tier": source_tier,
-            "rarity_tier": source_tier,
+            "rarity_tier": rarity_tier,
             "rarity_type": rarity_type,
             "pattern": pattern,
             "palette_id": palette_id,
             "category": category,
             "collar": collar,
             "collar_id": collar_id,
+            "collar_type": str(collar_id) if collar and collar_id else "none",
             "color_tuple": color_tuple,
+            "variant_key": variant_key,
+            "slots": slots,
             "layers_24": layers_24,
             "review_file": str(review_item.get("review_file")),
             "review_source_file": source_file_rel,
@@ -324,7 +356,8 @@ def main() -> int:
                 pattern=pattern,
                 palette_id=palette_id,
                 collar=collar,
-                rarity_tier=source_tier,
+                collar_id=collar_id,
+                rarity_tier=rarity_tier,
                 rarity_type=rarity_type,
             ),
         }
@@ -332,7 +365,7 @@ def main() -> int:
 
     if len(items_out) != 1000:
         raise RuntimeError(f"Unexpected output item count: {len(items_out)}")
-    if by_tier["rare"] != 98 or by_tier["superrare"] != 2 or by_tier["base"] != 900:
+    if by_tier["rare"] != 98 or by_tier["superrare"] != 2 or by_tier["common"] != 900:
         raise RuntimeError(f"Unexpected rarity counts: {dict(by_tier)}")
 
     rare_part_inputs = {rt: rel(path) for rt, path in RARE_OVERLAY_BY_TYPE.items()}
@@ -361,6 +394,7 @@ def main() -> int:
             "by_pattern": dict(by_pattern),
             "by_palette_id": dict(by_palette),
             "by_collar": dict(by_collar_state),
+            "by_collar_type": dict(by_collar_type),
         },
         "items": items_out,
     }
@@ -370,7 +404,7 @@ def main() -> int:
     print(f"[final1000] out_manifest={args.out_manifest}")
     print(
         "[final1000] counts "
-        f"base={by_tier['base']} rare={by_tier['rare']} superrare={by_tier['superrare']} "
+        f"common={by_tier['common']} rare={by_tier['rare']} superrare={by_tier['superrare']} "
         f"collar_with={by_collar_state['with_collar']} collar_without={by_collar_state['without_collar']}"
     )
     return 0

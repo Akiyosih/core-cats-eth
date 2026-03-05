@@ -9,11 +9,13 @@ Representative sample grid generated from the finalized 1,000-cat review build (
 - `manifests/final_1000_validation_v1.json`: Structural validation result for final manifest and 24x24 outputs.
 - `manifests/final_1000_trait_summary_v1.json`: Distribution summary (palette/pattern/collar/rarity).
 - `manifests/final_1000_preview_consistency_v1.json`: 1000/1000 consistency audit between review previews and final 24x24 outputs.
+- `manifests/trait_display_labels_v1.json`: Display label mapping for UI/metadata rendering (internal IDs remain stable).
 
 ## Project Navigation
 - [Project Status](docs/PROJECT_STATUS.md)
 - [Core Migration Roadmap](docs/ROADMAP_CORE_MIGRATION.md)
 - [Core Blockchain Work Procedure](docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md)
+- [Final 1000 Trait Schema](docs/FINAL1000_TRAIT_SCHEMA.md)
 - [ADR-0001: ETH-first Strategy](docs/DECISIONS/ADR-0001-eth-first-strategy.md)
 
 ## English
