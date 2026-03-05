@@ -10,6 +10,11 @@ Representative sample grid generated from the finalized 1,000-cat review build (
 - `manifests/final_1000_trait_summary_v1.json`: Distribution summary (palette/pattern/collar/rarity).
 - `manifests/final_1000_preview_consistency_v1.json`: 1000/1000 consistency audit between review previews and final 24x24 outputs.
 
+## Project Navigation
+- [Project Status](docs/PROJECT_STATUS.md)
+- [Core Migration Roadmap](docs/ROADMAP_CORE_MIGRATION.md)
+- [ADR-0001: ETH-first Strategy](docs/DECISIONS/ADR-0001-eth-first-strategy.md)
+
 ## English
 
 ### Overview
