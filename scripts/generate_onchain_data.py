@@ -22,17 +22,31 @@ DEFAULT_OUT = ROOT / "contracts" / "CoreCatsOnchainData.sol"
 ART_ROOT = ROOT / "art"
 
 PATTERN_NAMES = [
-    "calico",
-    "classic_tabby",
-    "hachiware",
-    "mackerel_tabby",
-    "masked",
-    "pointed",
     "solid",
-    "tortoiseshell",
+    "socks",
+    "pointed",
+    "patched",
+    "hachiware",
     "tuxedo",
+    "masked",
+    "classic_tabby",
+    "mackerel_tabby",
+    "tortoiseshell",
     "superrare",
 ]
+
+PATTERN_SOURCE_FILES = {
+    "solid": "solid.png",
+    "socks": "calico.png",
+    "pointed": "pointed.png",
+    "patched": "calico.png",
+    "hachiware": "hachiware.png",
+    "tuxedo": "tuxedo.png",
+    "masked": "masked.png",
+    "classic_tabby": "classic_tabby.png",
+    "mackerel_tabby": "mackerel_tabby.png",
+    "tortoiseshell": "tortoiseshell.png",
+}
 
 PALETTE_NAMES = [
     "black_white",
@@ -198,7 +212,8 @@ def build_pattern_data() -> tuple[bytes, bytes]:
     packed_all = bytearray()
 
     for name in PATTERN_NAMES[:-1]:  # exclude synthetic "superrare"
-        path = ART_ROOT / "parts" / "patterns" / f"{name}.png"
+        source_name = PATTERN_SOURCE_FILES[name]
+        path = ART_ROOT / "parts" / "patterns" / source_name
         px = parse_png_rgba(path)
         counts: Counter[tuple[int, int, int]] = Counter()
         for row in px:
@@ -389,7 +404,7 @@ contract CoreCatsOnchainData {{
 
     // 1 byte per pattern id (including synthetic superrare=0 slots)
     bytes internal constant PATTERN_SLOT_COUNTS = hex"{to_hex(pattern_slot_counts)}";
-    // Nibble-packed 24x24 maps for real patterns (first 9 entries only), 288 bytes each.
+    // Nibble-packed 24x24 maps for all non-superrare patterns, 288 bytes each.
     // Value: 0=transparent, 1..4=slot index
     bytes internal constant PATTERN_MASKS = hex"{to_hex(pattern_masks)}";
 

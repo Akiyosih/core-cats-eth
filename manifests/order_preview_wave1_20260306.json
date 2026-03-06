@@ -1,0 +1,47 @@
+{
+  "version": "order_preview_wave1_20260306",
+  "created_at": "2026-03-06T00:00:00Z",
+  "notes": [
+    "Preview-only ordering spec.",
+    "Token IDs remain unchanged at this stage.",
+    "Superrare tokens stay at the end."
+  ],
+  "pattern_order": [
+    "solid",
+    "socks",
+    "pointed",
+    "patched",
+    "hachiware",
+    "tuxedo",
+    "masked",
+    "classic_tabby",
+    "mackerel_tabby",
+    "tortoiseshell"
+  ],
+  "palette_order": {
+    "natural": [
+      "black_solid",
+      "black_white",
+      "ivory_brown",
+      "gray_soft",
+      "orange_white",
+      "orange_warm",
+      "tricolor_soft",
+      "earth_tone"
+    ],
+    "special": [
+      "cyberpunk",
+      "psychedelic",
+      "tropical_fever",
+      "zombie",
+      "space_nebula"
+    ]
+  },
+  "superrare": {
+    "position": "last",
+    "order": [
+      "pinglogo",
+      "corelogo"
+    ]
+  }
+}

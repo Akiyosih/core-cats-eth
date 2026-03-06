@@ -1,0 +1,26 @@
+{
+  "version": "art_curation_wave2_20260307",
+  "created_at": "2026-03-07T00:00:00Z",
+  "notes": [
+    "Move overlooked patched tokens into socks metadata category.",
+    "Replace token 750 with a newly selected mackerel_tabby earth_tone base while preserving checkered_collar.",
+    "Keep total collar counts unchanged by inheriting the removed token's collar." 
+  ],
+  "pattern_updates": [
+    {
+      "pattern": "socks",
+      "token_ids": [
+        56, 601, 603, 604, 606, 611, 619, 621, 622, 625, 626, 628,
+        630, 631, 632, 635, 636, 656, 657, 660, 661, 664
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "token_id": 750,
+      "source_kind": "base",
+      "generated_file_24": "art/generated/png/mackerel_tabby__earth_tone__000029.png",
+      "keep_collar_id": "checkered_collar"
+    }
+  ]
+}

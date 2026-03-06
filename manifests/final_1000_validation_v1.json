@@ -1,6 +1,6 @@
 {
   "version": "final_1000_validation_v1",
-  "validated_at": "2026-03-05T11:38:13Z",
+  "validated_at": "2026-03-06T15:31:01Z",
   "manifest": "manifests/final_1000_manifest_v1.json",
   "ok": true,
   "error_count": 0,
@@ -13,13 +13,13 @@
     },
     "by_rarity_type": {
       "none": 900,
+      "red_nose": 22,
+      "blue_nose": 22,
       "odd_eyes": 22,
       "sunglasses": 16,
       "glasses": 16,
-      "blue_nose": 22,
-      "red_nose": 22,
-      "corelogo": 1,
-      "pinglogo": 1
+      "pinglogo": 1,
+      "corelogo": 1
     },
     "by_collar": {
       "without_collar": 600,
@@ -31,31 +31,32 @@
       "classic_red_collar": 200
     },
     "by_pattern": {
-      "calico": 159,
-      "classic_tabby": 132,
-      "hachiware": 84,
-      "mackerel_tabby": 110,
-      "masked": 123,
-      "pointed": 118,
       "solid": 44,
-      "tortoiseshell": 130,
+      "socks": 53,
+      "pointed": 118,
+      "patched": 106,
+      "hachiware": 84,
       "tuxedo": 98,
+      "masked": 123,
+      "classic_tabby": 132,
+      "mackerel_tabby": 110,
+      "tortoiseshell": 130,
       "superrare": 2
     },
     "by_palette_id": {
-      "black_white": 24,
-      "cyberpunk": 85,
-      "earth_tone": 190,
+      "black_solid": 2,
+      "black_white": 21,
+      "ivory_brown": 8,
       "gray_soft": 82,
       "orange_warm": 87,
-      "orange_white": 52,
+      "earth_tone": 191,
+      "cyberpunk": 85,
       "psychedelic": 99,
-      "space_nebula": 81,
-      "tricolor_soft": 97,
       "tropical_fever": 103,
       "zombie": 89,
-      "ivory_brown": 7,
-      "black_solid": 2,
+      "space_nebula": 82,
+      "orange_white": 52,
+      "tricolor_soft": 97,
       "superrare": 2
     }
   }

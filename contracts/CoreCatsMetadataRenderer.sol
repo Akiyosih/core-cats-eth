@@ -21,7 +21,7 @@ contract CoreCatsMetadataRenderer {
     uint256 public constant MAX_SUPPLY = 1000;
 
     // pattern ids
-    uint8 private constant PATTERN_SUPERRARE = 9;
+    uint8 private constant PATTERN_SUPERRARE = 10;
 
     // collar type ids
     uint8 private constant COLLAR_NONE = 0;
@@ -350,16 +350,17 @@ contract CoreCatsMetadataRenderer {
     }
 
     function _patternName(uint8 id) internal pure returns (string memory) {
-        if (id == 0) return "calico";
-        if (id == 1) return "classic_tabby";
-        if (id == 2) return "hachiware";
-        if (id == 3) return "mackerel_tabby";
-        if (id == 4) return "masked";
-        if (id == 5) return "pointed";
-        if (id == 6) return "solid";
-        if (id == 7) return "tortoiseshell";
-        if (id == 8) return "tuxedo";
-        if (id == 9) return "superrare";
+        if (id == 0) return "solid";
+        if (id == 1) return "socks";
+        if (id == 2) return "pointed";
+        if (id == 3) return "patched";
+        if (id == 4) return "hachiware";
+        if (id == 5) return "tuxedo";
+        if (id == 6) return "masked";
+        if (id == 7) return "classic_tabby";
+        if (id == 8) return "mackerel_tabby";
+        if (id == 9) return "tortoiseshell";
+        if (id == 10) return "superrare";
         return "unknown";
     }
 

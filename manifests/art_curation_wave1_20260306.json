@@ -1,0 +1,36 @@
+{
+  "version": "art_curation_wave1_20260306",
+  "created_at": "2026-03-06T00:00:00Z",
+  "notes": [
+    "Replace three mackerel_tabby tokens selected by manual review.",
+    "Split former calico pattern into patched and socks for metadata cleanup.",
+    "Keep token 751 as blue_nose with classic_red_collar while changing its base art."
+  ],
+  "pattern_split": {
+    "from": "calico",
+    "default_to": "patched",
+    "socks_token_ids": [
+      1, 5, 6, 7, 10, 11, 16, 17, 29, 31, 33, 34, 35, 38, 39, 41,
+      45, 46, 47, 50, 51, 57, 78, 79, 83, 84, 88, 89, 90, 92, 95
+    ]
+  },
+  "replacements": [
+    {
+      "token_id": 227,
+      "source_kind": "base",
+      "generated_file_24": "art/generated/png/mackerel_tabby__black_white__000003.png"
+    },
+    {
+      "token_id": 228,
+      "source_kind": "base",
+      "generated_file_24": "art/generated/png/mackerel_tabby__space_nebula__000097.png"
+    },
+    {
+      "token_id": 751,
+      "source_kind": "rare",
+      "generated_file_24": "art/generated/png/mackerel_tabby__ivory_brown__000037.png",
+      "rarity_type": "blue_nose",
+      "keep_collar_id": "classic_red_collar"
+    }
+  ]
+}
