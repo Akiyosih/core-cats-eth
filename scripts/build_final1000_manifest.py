@@ -160,13 +160,11 @@ def build_attributes(
     rarity_tier: str,
     rarity_type: str,
 ) -> list[dict[str, str]]:
-    collar_state = "with_collar" if collar else "without_collar"
-    collar_type = str(collar_id) if collar and collar_id else "none"
+    collar_value = str(collar_id) if collar and collar_id else "none"
     return [
         {"trait_type": "Pattern", "value": pattern},
         {"trait_type": "Color Variation", "value": palette_id},
-        {"trait_type": "Collar", "value": collar_state},
-        {"trait_type": "Collar Type", "value": collar_type},
+        {"trait_type": "Collar", "value": collar_value},
         {"trait_type": "Rarity Tier", "value": rarity_tier},
         {"trait_type": "Rarity Type", "value": rarity_type},
     ]

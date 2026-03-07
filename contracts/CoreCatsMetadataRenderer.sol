@@ -257,8 +257,7 @@ contract CoreCatsMetadataRenderer {
     function _buildAttributes(TokenRecord memory rec) internal pure returns (string memory) {
         string memory pattern = _patternName(rec.patternId);
         string memory palette = _paletteName(rec.paletteId);
-        string memory collar = rec.collarTypeId == COLLAR_NONE ? "without_collar" : "with_collar";
-        string memory collarType = _collarTypeName(rec.collarTypeId);
+        string memory collar = _collarTypeName(rec.collarTypeId);
         string memory tier = _rarityTierName(rec.rarityTierId);
         string memory rtype = _rarityTypeName(rec.rarityTypeId);
 
@@ -269,8 +268,6 @@ contract CoreCatsMetadataRenderer {
             palette,
             '"},{"trait_type":"Collar","value":"',
             collar,
-            '"},{"trait_type":"Collar Type","value":"',
-            collarType,
             '"},{"trait_type":"Rarity Tier","value":"',
             tier,
             '"},{"trait_type":"Rarity Type","value":"',

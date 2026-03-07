@@ -3,22 +3,24 @@
 ## 目的
 `manifests/final_1000_manifest_v1.json` の属性定義を固定し、UI表示・on-chain metadata・検証の解釈を統一する。
 
-## 固定属性（6項目）
+## 固定属性（5項目）
 1. `Pattern`
 2. `Color Variation` (`palette_id`)
-3. `Collar` (`with_collar` / `without_collar`)
-4. `Collar Type` (`none` / `checkered_collar` / `classic_red_collar`)
-5. `Rarity Tier` (`common` / `rare` / `superrare`)
-6. `Rarity Type` (`none` / `odd_eyes` / `red_nose` / `blue_nose` / `glasses` / `sunglasses` / `corelogo` / `pinglogo`)
+3. `Collar` (`none` / `checkered_collar` / `classic_red_collar`)
+4. `Rarity Tier` (`common` / `rare` / `superrare`)
+5. `Rarity Type` (`none` / `odd_eyes` / `red_nose` / `blue_nose` / `glasses` / `sunglasses` / `corelogo` / `pinglogo`)
 
 ## superrare 固定ルール
 - `Rarity Tier = superrare` の2体のみ対象。
 - 次を固定値として扱う:
   - `Pattern = superrare`
   - `Color Variation = superrare`
-  - `Collar = without_collar`
-  - `Collar Type = none`
+  - `Collar = none`
   - `Rarity Type = corelogo` または `pinglogo`
+
+## 内部データとの切り分け
+- canonical manifest item には内部検証用に `collar` 真偽値と `collar_type` が残る。
+- ただし公開 metadata / viewer attributes では冗長な `with_collar` / `without_collar` を出さず、`Collar` を `none` / `checkered_collar` / `classic_red_collar` の1項目として扱う。
 
 ## Pattern / Color Variation と実画の関係
 - `Pattern` は模様テンプレート名。

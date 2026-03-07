@@ -5,16 +5,11 @@
     "Pattern": "Coat Pattern",
     "Color Variation": "Colorway",
     "Collar": "Collar",
-    "Collar Type": "Collar Style",
     "Rarity Tier": "Tier",
     "Rarity Type": "Special Trait"
   },
   "trait_value_labels": {
     "Collar": {
-      "with_collar": "With Collar",
-      "without_collar": "Without Collar"
-    },
-    "Collar Type": {
       "none": "No Collar",
       "checkered_collar": "Checkered Collar",
       "classic_red_collar": "Classic Red Collar"

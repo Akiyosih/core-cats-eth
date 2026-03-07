@@ -167,22 +167,19 @@ def main() -> int:
             add_error(errors, f"token {tid}: attributes must be a list")
         else:
             trait_names = {a.get("trait_type") for a in attrs if isinstance(a, dict)}
-            for req in ("Pattern", "Color Variation", "Collar", "Collar Type", "Rarity Tier", "Rarity Type"):
+            for req in ("Pattern", "Color Variation", "Collar", "Rarity Tier", "Rarity Type"):
                 if req not in trait_names:
                     add_error(errors, f"token {tid}: missing required attribute {req}")
             attr_map = {}
             for a in attrs:
                 if isinstance(a, dict) and "trait_type" in a and "value" in a:
                     attr_map[str(a["trait_type"])] = str(a["value"])
-            expected_collar_state = "with_collar" if collar else "without_collar"
             if attr_map.get("Pattern") != str(pattern):
                 add_error(errors, f"token {tid}: attribute Pattern mismatch")
             if attr_map.get("Color Variation") != str(palette):
                 add_error(errors, f"token {tid}: attribute Color Variation mismatch")
-            if attr_map.get("Collar") != expected_collar_state:
+            if attr_map.get("Collar") != str(collar_type):
                 add_error(errors, f"token {tid}: attribute Collar mismatch")
-            if attr_map.get("Collar Type") != str(collar_type):
-                add_error(errors, f"token {tid}: attribute Collar Type mismatch")
             if attr_map.get("Rarity Tier") != str(tier):
                 add_error(errors, f"token {tid}: attribute Rarity Tier mismatch")
             if attr_map.get("Rarity Type") != str(rtype):
