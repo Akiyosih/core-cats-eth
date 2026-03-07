@@ -9,7 +9,7 @@
   - https://github.com/Akiyosih/core-cats/blob/main/docs/DECISIONS/ADR-0001-core-toolchain-priority.md
 
 ## Preview
-![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
+![Core Cats Preview Grid](docs/assets/core_cats_preview_grid_teaser.png)
 Representative random sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
 
 ## Current Fixed Artifacts
