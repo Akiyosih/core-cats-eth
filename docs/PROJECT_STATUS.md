@@ -1,6 +1,5 @@
 # Core Cats ETH - Project Status
 
-Last updated: 2026-03-06
 
 ## Scope
 - This repository keeps ETH rehearsal artifacts, implementation history, and reproducibility references.

@@ -1,6 +1,5 @@
 # Core Cats - ETH to Core Blockchain Migration Roadmap
 
-Last updated: 2026-03-05
 
 ## Objective
 Build and validate the full on-chain NFT release flow in stages:

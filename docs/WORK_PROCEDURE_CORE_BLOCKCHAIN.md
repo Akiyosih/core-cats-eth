@@ -5,7 +5,6 @@ Canonical current procedure is maintained in:
 https://github.com/Akiyosih/core-cats/blob/main/docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md  
 with ADR-driven order `A: CoreZeppelin direct -> B: external solc -> C: self-implemented minimal core`.
 
-Last updated: 2026-03-05  
 Version: v1.1 (randomness policy locked)
 
 ## 0. Source Validation Policy (Mandatory)
