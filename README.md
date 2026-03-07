@@ -10,7 +10,7 @@
 
 ## Preview
 ![Core Cats Preview Grid](docs/assets/core_cats_preview_grid.png)
-Representative sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
+Representative random sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
 
 ## Current Fixed Artifacts
 - `manifests/final_1000_manifest_v1.json`: Canonical fixed 1,000 token manifest (token IDs, traits, 24x24 layer composition metadata).
