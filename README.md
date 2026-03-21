@@ -1,33 +1,56 @@
-# 🐱 Core Cats - Fully On-chain NFT Project (Ethereum Testnet)
+# Core Cats ETH Rehearsal Archive
 
-## Repository Mode
-- Current role: reference/archive track for ETH rehearsal outputs
-- Active Core-first implementation track: `core-cats` repository
-- This repository remains as reproducible reference for manifest, renderer, and migration docs
-- Canonical current Core execution order lives in:
-  - https://github.com/Akiyosih/core-cats/blob/main/docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md
-  - https://github.com/Akiyosih/core-cats/blob/main/docs/DECISIONS/ADR-0001-core-toolchain-priority.md
+This repository is a **historical archive** of the earlier Ethereum-based rehearsal path.
+
+It is **not** the active implementation.
+
+Current production-facing repository:
+1. https://github.com/Akiyosih/core-cats
+
+Current Core-first launch path:
+1. https://github.com/Akiyosih/core-cats/blob/main/README.md
+2. https://github.com/Akiyosih/core-cats/blob/main/docs/OFFICIAL_CCAT_LAUNCH_PRINCIPLES.md
+3. https://github.com/Akiyosih/core-cats/blob/main/docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md
+
+## Archive Status
+Use this repository only as historical reference for:
+
+1. the ETH rehearsal detour before the Core-first path stabilized
+2. earlier manifest / renderer / migration notes
+3. imported reference material that was later demoted from the active production path
+
+Do not treat this repository as:
+
+1. the current mint implementation
+2. the current deploy/runbook source of truth
+3. the current public review entry point
+
+## What Still Matters Here
+This archive still preserves:
+
+1. finalized collection-manifest artifacts
+2. renderer-related rehearsal outputs
+3. migration-era ADRs and notes
+4. historical context for how the project reached the current Core-first structure
+
+## Recommended Reader Path
+If you are reviewing Core Cats today, start in `core-cats` instead:
+
+1. official philosophy:
+   - https://github.com/Akiyosih/core-cats/blob/main/docs/OFFICIAL_CCAT_LAUNCH_PRINCIPLES.md
+2. public trust and evidence:
+   - https://github.com/Akiyosih/core-cats/blob/main/docs/TRUST_AND_PRIVACY_SURFACE.md
+   - https://github.com/Akiyosih/core-cats/blob/main/docs/MAINNET_PUBLIC_EVIDENCE_CHECKLIST.md
+3. launch / cutover:
+   - https://github.com/Akiyosih/core-cats/blob/main/docs/MAINNET_CLOSED_LAUNCH_RUNBOOK.md
+   - https://github.com/Akiyosih/core-cats/blob/main/docs/VERCEL_MAINNET_CUTOVER_CHECKLIST.md
 
 ## Preview
 ![Core Cats Preview Grid](docs/assets/core_cats_preview_grid_teaser.png)
-Representative random sample grid generated from the finalized 1,000-cat review build (local generated directories are ignored in Git).
 
-## Current Fixed Artifacts
-- `manifests/final_1000_manifest_v1.json`: Canonical fixed 1,000 token manifest (token IDs, traits, 24x24 layer composition metadata).
-- `manifests/final_1000_validation_v1.json`: Structural validation result for final manifest and 24x24 outputs.
-- `manifests/final_1000_trait_summary_v1.json`: Distribution summary (palette/pattern/collar/rarity).
-- `manifests/final_1000_preview_consistency_v1.json`: 1000/1000 consistency audit between review previews and final 24x24 outputs.
-- `manifests/trait_display_labels_v1.json`: Display label mapping for UI/metadata rendering (internal IDs remain stable).
+Representative random sample grid generated from the finalized 1,000-cat review build.
 
-## Phase A-1 (tokenURI) Status
-- `contracts/CoreCats.sol`: `tokenURI` is now delegated to `metadataRenderer`.
-- `contracts/CoreCatsOnchainData.sol`: compressed on-chain data generated from `final_1000_manifest_v1` + 24x24 source layers.
-- `contracts/CoreCatsMetadataRenderer.sol`: deterministic on-chain SVG and metadata renderer.
-- `scripts/generate_onchain_data.py`: regenerates `CoreCatsOnchainData.sol`.
-- `scripts/verify_renderer_manifest_match.mjs`: verifies metadata attributes match manifest (1000/1000).
-- `scripts/verify_renderer_pixels.mjs`: verifies rendered SVG pixels match final `png24` outputs (1000/1000).
-
-## Project Navigation
+## Historical Navigation
 - [Project Status](docs/PROJECT_STATUS.md)
 - [Core Migration Roadmap](docs/ROADMAP_CORE_MIGRATION.md)
 - [Core Blockchain Work Procedure](docs/WORK_PROCEDURE_CORE_BLOCKCHAIN.md)
@@ -35,126 +58,13 @@ Representative random sample grid generated from the finalized 1,000-cat review 
 - [ADR-0001: ETH-first Strategy](docs/DECISIONS/ADR-0001-eth-first-strategy.md)
 - [ADR-0002: Randomness Strategy](docs/DECISIONS/ADR-0002-randomness-strategy.md)
 
-## English
+## Repository Role
+This repository remains public because keeping the historical detour visible is more transparent than pretending it never happened.
 
-### Overview
-Core Cats is a **fully on-chain NFT collection** originally designed for Core Blockchain and now being implemented on the **Ethereum Testnet** for development and testing.  
-It features **24×24 pixel generative cats**, inspired by CryptoPunks, each with unique patterns, eye colors, and poses.  
-All NFTs are **fully generated and stored on-chain**—no off-chain metadata.
+The intended long-term posture is:
+1. keep this repository readable as an archive
+2. keep `core-cats` as the only active production-facing path
+3. avoid routing new outside readers here first
 
-- **Total Supply:** 1,000 unique cats (testnet version for now)
-- **Mint Type:** Free Mint
-- **License:** MIT
-- **Blockchain:** Ethereum Testnet (Goerli/Sepolia planned)
-
----
-
-### Objectives
-- Complete functional deployment on Ethereum Testnet before mainnet migration.
-- Maintain **fully open and transparent** development.
-- Ensure **full on-chain storage** of SVG images and metadata.
-- Use lessons from testnet deployment to prepare for Ethereum Mainnet and future Core Blockchain deployment.
-- Preserve CryptoPunks-inspired design with original cat personalities.
-
----
-
-### Roadmap
-1. **Local Development Setup**
-   - Initialize Hardhat project
-   - Configure `.gitignore` to protect sensitive files
-   - Prepare test accounts with faucet ETH
-
-2. **Smart Contract Development**
-   - Implement minimal ERC-721-compatible contract
-   - Store SVG image data fully on-chain
-   - Add random trait generation logic
-
-3. **Testnet Deployment**
-   - Deploy to Ethereum Testnet (Goerli/Sepolia)
-   - Run minting and metadata retrieval tests
-   - Verify contract on Etherscan
-
-4. **Mainnet & Core Blockchain Migration**
-   - Deploy to Ethereum Mainnet
-   - Adapt code for Core Blockchain deployment
-   - Verify and publish both versions
-
-5. **Launch & Community**
-   - Open minting for the public (mainnet stage)
-   - Community showcase and documentation release
-
----
-
-### Tech Stack
-- **Smart Contracts:** Solidity (ERC-721)
-- **Dev Tools:** Hardhat, OpenZeppelin, Ethers.js
-- **Frontend:** Static site (GitHub Pages / Vercel)
-- **Node:** Ethereum Testnet RPC providers
-
----
-
-### License
-MIT License - Free to use, modify, and distribute.
-
----
-
-## 日本語
-
-### 概要
-Core Catsは、もともとCore Blockchain向けに設計された**フルオンチェーンNFTコレクション**で、現在は**Ethereumテストネット**上で開発・検証を行っています。  
-**24×24ピクセルのジェネラティブ猫アート**を特徴とし、模様・目の色・ポーズがすべてランダム生成されます。  
-すべてのNFTが**完全にオンチェーンに保存**され、オフチェーンのメタデータは一切使用しません。
-
-- **発行総数:** 1,000匹（現状はテストネット版）
-- **ミント形式:** フリーミント
-- **ライセンス:** MIT
-- **ブロックチェーン:** Ethereumテストネット（Goerli / Sepolia予定）
-
----
-
-### 目的
-- Ethereumテストネットでの完全動作を達成し、メインネット移行に備える。
-- **オープンで透明な**開発を継続。
-- SVG画像とメタデータを**完全オンチェーン**で保存。
-- テストネットで得た知見をEthereumメインネットと将来のCore Blockchainデプロイに活用。
-- クリプトパンクスを参考にしつつ、独自の猫キャラクターを創造。
-
----
-
-### ロードマップ
-1. **ローカル開発環境構築**
-   - Hardhatプロジェクト初期化
-   - `.gitignore`で秘匿情報を保護
-   - テストアカウントにFaucet ETHを取得
-
-2. **スマートコントラクト開発**
-   - 最小限のERC-721互換コントラクト実装
-   - SVG画像を完全オンチェーン化
-   - ランダム属性生成ロジック構築
-
-3. **テストネットデプロイ**
-   - Ethereumテストネット（Goerli / Sepolia）にデプロイ
-   - ミントやメタデータ取得のテスト
-   - Etherscanでコントラクト検証
-
-4. **メインネット & Core Blockchain移行**
-   - Ethereumメインネットにデプロイ
-   - Core Blockchain対応コードに適応
-   - 両方のバージョンを検証・公開
-
-5. **ローンチ & コミュニティ**
-   - メインネットで一般ユーザー向けにミント開放
-   - コミュニティ展示とドキュメント公開
-
----
-
-### 技術スタック
-- **スマートコントラクト:** Solidity (ERC-721)
-- **開発ツール:** Hardhat, OpenZeppelin, Ethers.js
-- **フロントエンド:** 静的サイト（GitHub Pages / Vercel）
-- **ノード:** EthereumテストネットRPCプロバイダ
-
----
-
-### ライセンス
-MITライセンス - 自由に利用・改変可能
+## License
+MIT License.
